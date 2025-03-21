@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">PowerDump</h3>
+            <h3 className="text-xl font-bold mb-4">ElectroBat</h3>
             <p className="text-gray-400 mb-4">
               20 años brindando soluciones en baterías industriales y alquiler de volquetes con la mejor calidad y servicio del mercado.
             </p>
@@ -139,22 +139,18 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <FaMapMarkerAlt className="text-yellow-400 mt-1 mr-3" />
-                <span className="text-gray-400">Av. Industrial 1234, Zona Industrial, Buenos Aires, Argentina</span>
+                <span className="text-gray-400">Av. Córdoba 4031, Rosario, Santa Fe, Argentina</span>
               </li>
               <li className="flex items-center">
                 <FaPhone className="text-yellow-400 mr-3" />
-                <span className="text-gray-400">+54 11 4567-8901</span>
+                <span className="text-gray-400">+54 9 3414395703</span>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="text-yellow-400 mr-3" />
-                <span className="text-gray-400">info@powerdump.com</span>
+                <span className="text-gray-400">electrobat.baterias@gmail.com</span>
               </li>
             </ul>
           </div>
-        </div>
-        
-        <div className="border-t border-gray-800 pt-6 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} PowerDump. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
