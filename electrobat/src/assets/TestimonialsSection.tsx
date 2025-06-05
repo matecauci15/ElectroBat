@@ -4,7 +4,7 @@ import { FaQuoteLeft } from 'react-icons/fa';
 
 interface Testimonial {
   name: string;
-  position: string;
+  // position: string;
   quote: string;
   image: string;
 }
@@ -12,22 +12,22 @@ interface Testimonial {
 export const TestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-      name: "Carlos Rodríguez",
-      position: "Director de Operaciones, Constructora Andina",
-      quote: "Llevamos trabajando con PowerDump más de 5 años y la calidad de sus baterías y servicios ha sido excepcional. Su equipo técnico siempre está disponible cuando los necesitamos.",
+      name: "Guille",
+      // position: "Director de Operaciones, Constructora Andina",
+      quote: "Excelente atención, limpio, respetó precio acordado y eficaz en la reemplazo de la batería Moura. Sobrepasó expectativas.",
       image: "https://randomuser.me/api/portraits/men/32.jpg"
     },
     {
-      name: "Marta Sánchez",
-      position: "Gerente de Flota, Transportes del Sur",
-      quote: "El servicio de mantenimiento preventivo que ofrecen ha reducido nuestros tiempos de inactividad significativamente. Recomiendo ampliamente sus servicios.",
-      image: "https://randomuser.me/api/portraits/women/44.jpg"
+      name: "Javier Hernan Silva",
+      // position: "Gerente de Flota, Transportes del Sur",
+      quote: "Excelente atención, rapidez y cordialidad. Muy buena calidad y precios. Muy recomendable",
+      image: "https://randomuser.me/api/portraits/men/62.jpg"
     },
     {
-      name: "Roberto Gómez",
-      position: "Propietario, Excavaciones Gómez",
-      quote: "Los volquetes que alquilamos siempre están en perfectas condiciones. La puntualidad en las entregas y la atención personalizada hacen que sigamos confiando en ellos.",
-      image: "https://randomuser.me/api/portraits/men/62.jpg"
+      name: "Marina",
+      // position: "Propietario, Excavaciones Gómez",
+      quote: "Excelente la atención! Me resolvieron todo en 10 minutos y los precios son muy buenos! Recomendable 100%",
+      image: "https://randomuser.me/api/portraits/women/14.jpg"
     }
   ];
 
@@ -68,7 +68,7 @@ export const TestimonialsSection: React.FC = () => {
                 <FaQuoteLeft className="text-yellow-400 mx-auto mb-4 opacity-50" size={24} />
                 <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
                 <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                <p className="text-sm text-gray-500">{testimonial.position}</p>
+                {/* <p className="text-sm text-gray-500">{testimonial.position}</p> */}
               </div>
             </motion.div>
           ))}

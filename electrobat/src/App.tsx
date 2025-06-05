@@ -4,11 +4,15 @@ import { AboutSection } from './assets/AboutSection';
 import './index.css'; 
 import { Banner } from './assets/Banner'; 
 import { ContactSection } from './assets/ContactSection'; 
-import { VolquetesSection } from './assets/Volquetes'; 
+// import { VolquetesSection } from './assets/Volquetes'; 
 import { BatteriesSection } from './assets/BatteriesSection'; 
 import { TestimonialsSection } from './assets/TestimonialsSection'; 
-import { FeaturesSection } from './assets/FeaturesSection'; 
+// import { FeaturesSection } from './assets/FeaturesSection'; 
 import { Footer } from './assets/Footer';  
+import WhatsAppButton from './Components/whappbutton';
+import DomicilioSections from './assets/cambio';
+import CTAInmediataSection from './assets/ctainmediato';
+
 
 function App() {   
   return (     
@@ -18,16 +22,18 @@ function App() {
       <main>
         <section id="features">
           <Banner />
-          <FeaturesSection />
+          {/* <FeaturesSection /> */}
+          <DomicilioSections />
+          <CTAInmediataSection/>
         </section>
         
         <section id="about">
           <AboutSection />
         </section>
         
-        <section id="trucks">
+        {/* <section id="trucks">
           <VolquetesSection />
-        </section>
+        </section> */}
         
         <section id="batteries">
           <BatteriesSection />
@@ -41,7 +47,7 @@ function App() {
           <ContactSection />
         </section>
       </main>
-      
+      <WhatsAppButton></WhatsAppButton>
       <Footer />
     </div>
   ); 
