@@ -118,6 +118,8 @@
 //     </nav>
 //   );
 // };
+
+
 import React, { useState, useEffect } from "react";
 import ElectroBat from "./imgs/electrobat.png";
 
@@ -249,12 +251,12 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-2 lg:space-x-6">
+          <div className="cursor-pointer hidden md:flex items-center space-x-2 lg:space-x-6">
             {sections.map((section) => (
               <button
                 key={section.id}
                 onClick={() => handleClick(section.id)}
-                className={`px-4 py-2 rounded-lg transition-all duration-200 text-sm lg:text-base font-medium ${
+                className={`cursor-pointer px-4 py-2 rounded-lg transition-all duration-200 text-sm lg:text-base font-medium ${
                   activeSection === section.id 
                     ? "bg-[#e7d21e] text-gray-900 shadow-md" 
                     : "hover:bg-white/10 hover:text-[#e7d21e] text-white/90 hover:scale-105"
@@ -266,12 +268,12 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button - Solo visible cuando se scrollea hacia arriba */}
-          <div className={`md:hidden z-10 transition-all duration-300 ${
+          <div className={`cursor-pointer md:hidden z-10 transition-all duration-300 ${
             lastScrollY > 10 && visible ? 'opacity-100 visible' : 'opacity-0 invisible md:opacity-100 md:visible'
           }`}>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-lg transition-all duration-200 ${
+              className={`cursor-pointer p-2 rounded-lg transition-all duration-200 ${
                 isOpen 
                   ? 'bg-[#e7d21e] text-gray-900' 
                   : 'text-white hover:text-[#e7d21e] hover:bg-white/10'
@@ -308,7 +310,7 @@ export const Navbar = () => {
               <button
                 key={section.id}
                 onClick={() => handleClick(section.id)}
-                className={`block w-full text-left px-4 py-4 rounded-lg transition-all duration-200 font-medium text-base ${
+                className={`pointer block w-full text-left px-4 py-4 rounded-lg transition-all duration-200 font-medium text-base ${
                   activeSection === section.id 
                     ? "bg-[#e7d21e] text-gray-900 shadow-md" 
                     : "hover:bg-white/10 hover:text-[#e7d21e] text-white/90 hover:translate-x-2"

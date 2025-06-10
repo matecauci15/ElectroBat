@@ -66,7 +66,7 @@ const CTAInmediataSection = () => {
             <button
               id="cta-llamar-inmediato"
               onClick={handlePhoneClick}
-              className="w-full bg-[#04348c] text-white hover:bg-blue-700 transition-all duration-300 rounded-xl p-4 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="cursor-pointer w-full bg-[#04348c] text-white hover:bg-blue-700 transition-all duration-300 rounded-xl p-4 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <div className="flex items-center justify-center space-x-3">
                 <Phone className="w-5 h-5" />
@@ -84,7 +84,7 @@ const CTAInmediataSection = () => {
             <button
               id="cta-whatsapp-inmediato"
               onClick={handleWhatsAppClick}
-              className="w-full bg-white text-[#04348c] border-2 border-[#04348c] hover:bg-[#04348c] hover:text-white transition-all duration-300 rounded-xl p-4 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="cursor-pointer w-full bg-white text-[#04348c] border-2 border-[#04348c] hover:bg-[#04348c] hover:text-white transition-all duration-300 rounded-xl p-4 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <div className="flex items-center justify-center space-x-3">
                 <MessageCircle className="w-5 h-5" />
@@ -102,7 +102,7 @@ const CTAInmediataSection = () => {
             <button
               id="cta-maps-inmediato"
               onClick={handleMapsClick}
-              className="w-full bg-white text-[#04348c] border-2 border-[#04348c] hover:bg-[#04348c] hover:text-white transition-all duration-300 rounded-xl p-4 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="cursor-pointer w-full bg-white text-[#04348c] border-2 border-[#04348c] hover:bg-[#04348c] hover:text-white transition-all duration-300 rounded-xl p-4 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <div className="flex items-center justify-center space-x-3">
                 <MapPin className="w-5 h-5" />

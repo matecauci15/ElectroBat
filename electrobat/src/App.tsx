@@ -16,7 +16,7 @@ import CTAInmediataSection from './assets/ctainmediato';
 
 function App() {   
   return (     
-    <div className="app">
+    <div className="app overflow-hidden">
       <Navbar />
       
       <main>

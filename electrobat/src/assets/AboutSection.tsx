@@ -3,19 +3,8 @@ import { motion } from 'framer-motion';
 import empresa from './imgs/electrobat.webp';
 import { FaTools, FaAward, FaUsers, FaChartLine } from 'react-icons/fa';
 
-// interface TimelineEvent {
-//   year: string;
-//   title: string;
-//   description: string;
-// }
-
 export const AboutSection: React.FC = () => {
-  // const timelineEvents: TimelineEvent[] = [
-  //   { year: '2003', title: 'Fundación', description: 'Comenzamos como un pequeño negocio local de baterías' },
-  //   { year: '2008', title: 'Expansión', description: 'Incorporamos el servicio de alquiler de volquetes' },
-  //   { year: '2013', title: 'Certificación', description: 'Obtuvimos certificación ISO 9001 en gestión de calidad' },
-  //   { year: '2023', title: 'Actualidad', description: '20 años liderando el mercado con soluciones innovadoras' }
-  // ];
+
 
   return (
     <section id="about" className="py-20 bg-gray-100">
@@ -98,46 +87,6 @@ export const AboutSection: React.FC = () => {
             </div>
           </motion.div>
         </div>
-        
-        {/* Company Timeline */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-20"
-        >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Nuestra Historia</h3>
-          <div className="relative">
-
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-yellow-400"></div>
-            
-
-            <div className="space-y-12">
-              {timelineEvents.map((event, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative flex items-center ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}
-                >
-                  <div className="flex-1"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-yellow-400 z-10 flex items-center justify-center">
-                    <span className="font-bold text-sm">{event.year}</span>
-                  </div>
-                  <div className="flex-1">
-                    <div className={`bg-white p-6 rounded-lg shadow-md ${index % 2 === 0 ? 'mr-6' : 'ml-6'}`}>
-                      <h4 className="font-bold text-lg text-gray-900">{event.title}</h4>
-                      <p className="text-gray-600">{event.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div> */}
         
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <motion.div

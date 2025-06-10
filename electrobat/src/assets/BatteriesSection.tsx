@@ -257,7 +257,7 @@ export const BatteriesSection: React.FC = () => {
           <div className="inline-flex rounded-md shadow-sm">
             <button
               onClick={() => setSelectedVehicle('all')}
-              className={`px-4 py-2 text-sm font-medium rounded-l-md border transition-colors ${
+              className={`cursor-pointer px-4 py-2 text-sm font-medium rounded-l-md border transition-colors ${
                 selectedVehicle === 'all' 
                   ? 'bg-yellow-500 text-white border-yellow-500' 
                   : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-300'
@@ -267,7 +267,7 @@ export const BatteriesSection: React.FC = () => {
             </button>
             <button
               onClick={() => setSelectedVehicle('car')}
-              className={`px-4 py-2 text-sm font-medium border-t border-b border-r transition-colors ${
+              className={`cursor-pointer px-4 py-2 text-sm font-medium border-t border-b border-r transition-colors ${
                 selectedVehicle === 'car' 
                   ? 'bg-yellow-500 text-white border-yellow-500' 
                   : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-300'
@@ -277,7 +277,7 @@ export const BatteriesSection: React.FC = () => {
             </button>
             <button
               onClick={() => setSelectedVehicle('truck')}
-              className={`px-4 py-2 text-sm font-medium border-t border-b border-r transition-colors ${
+              className={`cursor-pointer px-4 py-2 text-sm font-medium border-t border-b border-r transition-colors ${
                 selectedVehicle === 'truck' 
                   ? 'bg-yellow-500 text-white border-yellow-500' 
                   : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-300'
@@ -287,7 +287,7 @@ export const BatteriesSection: React.FC = () => {
             </button>
             <button
               onClick={() => setSelectedVehicle('motorcycle')}
-              className={`px-4 py-2 text-sm font-medium rounded-r-md border-t border-b border-r transition-colors ${
+              className={`cursor-pointer px-4 py-2 text-sm font-medium rounded-r-md border-t border-b border-r transition-colors ${
                 selectedVehicle === 'motorcycle' 
                   ? 'bg-yellow-500 text-white border-yellow-500' 
                   : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-300'
@@ -345,7 +345,7 @@ export const BatteriesSection: React.FC = () => {
                 
                 {/* Price and button section with fixed position at bottom */}
                 <div className="pt-4 border-t border-gray-100 mt-4 flex justify-center">
-  <button className="px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-yellow-500 transition-colors"
+  <button className="cursor-pointer px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-yellow-500 transition-colors"
   onClick={() => window.open("https://api.whatsapp.com/send/?phone=5493416868049&text=Hola%21+Queria+consultar+por+el+alquiler+de+volquetes&type=phone_number&app_absent=0")  }
 >
     Solicitar precio
@@ -366,7 +366,7 @@ export const BatteriesSection: React.FC = () => {
           >
             <button
               onClick={loadMore}
-              className="px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition-colors shadow-md flex items-center"
+              className="cursor-pointer px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition-colors shadow-md flex items-center"
             >
               Ver Más
               <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -414,7 +414,7 @@ export const BatteriesSection: React.FC = () => {
                 ))}
               </ul>
               <button 
-  className="px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition-colors shadow-md"
+  className="cursor-pointer px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition-colors shadow-md"
   onClick={() => window.open("https://api.whatsapp.com/send/?phone=5493416868049&text=Hola%21+Queria+consultar+por+el+alquiler+de+volquetes&type=phone_number&app_absent=0", "_blank")}
 >
   Agendar Diagnóstico
