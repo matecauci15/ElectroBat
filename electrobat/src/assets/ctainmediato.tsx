@@ -45,7 +45,7 @@ const CTAInmediataSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-6"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#04348c] mb-3">
+          <h2 className="text-2xl md:text-3xl uppercase font-bold text-[#04348c] mb-3">
             ¿Querés resolverlo ahora?
           </h2>
           

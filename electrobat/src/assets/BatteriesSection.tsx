@@ -44,20 +44,6 @@ interface PartnerLogo {
 export const BatteriesSection: React.FC = () => {
   const partnerLogos: PartnerLogo[] = [
     {
-      id: 1,
-      name: "Trojan",
-      image: LogoTrojan,
-      alt: "Logo de Trojan Battery Company"
-    },
-    {
-      id: 2,
-      name: "Probattery",
-      image: LogoProbattery,
-      alt: "Logo de Probattery",
-      width: 600,
-      height: 1000
-    },
-    {
       id: 3,
       name: "Moura",
       image: LogoMoura,
@@ -68,6 +54,20 @@ export const BatteriesSection: React.FC = () => {
       name: "Electrobat",
       image: LogoElectrobat,
       alt: "Logo de Electrobat"
+    },
+    {
+      id: 1,
+      name: "Trojan",
+      image: LogoTrojan,
+      alt: "Logo de Trojan Battery Company"
+    },
+    {
+      id: 2,
+      name: "Probattery",
+      image: LogoProbattery,
+      alt: "Logo de Probattery",
+      width: 1,
+      height: 1
     },
     {
       id: 5,
@@ -215,10 +215,10 @@ export const BatteriesSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-[#04348c] sm:text-4xl">
             Nuestras Baterías
           </h2>
-          <div className="h-1 w-20 bg-yellow-500 mx-auto mt-4"></div>
+          <div className="h-1 w-76 bg-yellow-500 mx-auto mt-4"></div>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
             Energía confiable para todo tipo de vehículos y maquinarias
           </p>
@@ -394,7 +394,7 @@ export const BatteriesSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-8 md:p-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Servicio de Diagnóstico</h3>
-              <div className="h-1 w-16 bg-yellow-500 mb-6"></div>
+              <div className="h-1 w-66 bg-yellow-500 mb-6"></div>
               <p className="text-gray-600 mb-6">
                 ¿Problemas con tu batería? Ofrecemos diagnóstico profesional y recomendaciones para extender la vida útil de tu batería.
               </p>
@@ -421,11 +421,11 @@ export const BatteriesSection: React.FC = () => {
 </button>
 
             </div>
-            <div className="bg-gray-900 flex items-center justify-center p-8 md:p-0">
+            <div className="bg-gray-900 flex">
               <img 
                 src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                 alt="Técnico realizando diagnóstico" 
-                className="rounded-lg shadow-lg max-h-80 md:max-h-full object-cover"
+                className="shadow-lg max-h-80 md:max-h-full "
               />
             </div>
           </div>

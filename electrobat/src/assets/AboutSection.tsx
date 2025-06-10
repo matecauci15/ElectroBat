@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import empresa from './imgs/electrobat.webp';
-import { FaTools, FaAward, FaUsers, FaChartLine } from 'react-icons/fa';
+import { Wrench, Award, Users, TrendingUp, Zap, Settings, Car, MapPin, Battery, Clock } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
-
 
   return (
     <section id="about" className="py-20 bg-gray-100">
@@ -16,10 +15,10 @@ export const AboutSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Nosotros
+          <h2 className="text-3xl font-extrabold text-[#04348c] sm:text-4xl">
+            NOSOTROS
           </h2>
-          <div className="h-1 w-20 bg-yellow-400 mx-auto mt-4"></div>
+          <div className="h-1 w-39 bg-yellow-400 mx-auto mt-4"></div>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -88,7 +87,7 @@ export const AboutSection: React.FC = () => {
           </motion.div>
         </div>
         
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="mt-16 grid grid-cols-3 md:grid-cols-3 md:gap-8 gap-2 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +96,7 @@ export const AboutSection: React.FC = () => {
             className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow"
           >
             <div className="inline-flex items-center justify-center w-12 h-12 mb-4 bg-yellow-100 rounded-full">
-              <FaUsers className="h-6 w-6 text-yellow-600" />
+              <Users className="h-6 w-6 text-yellow-600" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900">500+</h3>
             <p className="text-gray-600 mt-1">Clientes Satisfechos</p>
@@ -111,9 +110,9 @@ export const AboutSection: React.FC = () => {
             className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow"
           >
             <div className="inline-flex items-center justify-center w-12 h-12 mb-4 bg-yellow-100 rounded-full">
-              <FaAward className="h-6 w-6 text-yellow-600" />
+              <Award className="h-6 w-6 text-yellow-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900">20</h3>
+            <h3 className="text-2xl font-bold text-gray-900">25+</h3>
             <p className="text-gray-600 mt-1">Años de Experiencia</p>
           </motion.div>
           
@@ -125,13 +124,13 @@ export const AboutSection: React.FC = () => {
             className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow"
           >
             <div className="inline-flex items-center justify-center w-12 h-12 mb-4 bg-yellow-100 rounded-full">
-              <FaChartLine className="h-6 w-6 text-yellow-600" />
+              <TrendingUp className="h-6 w-6 text-yellow-600" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900">1000+</h3>
-            <p className="text-gray-600 mt-1">Proyectos Entregados</p>
+            <p className="text-gray-600 mt-1">Baterias Entregadas</p>
           </motion.div>
           
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -139,12 +138,152 @@ export const AboutSection: React.FC = () => {
             className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow"
           >
             <div className="inline-flex items-center justify-center w-12 h-12 mb-4 bg-yellow-100 rounded-full">
-              <FaTools className="h-6 w-6 text-yellow-600" />
+              <Wrench className="h-6 w-6 text-yellow-600" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900">24/7</h3>
             <p className="text-gray-600 mt-1">Soporte Técnico</p>
-          </motion.div>
+          </motion.div> */}
         </div>
+        
+        {/* NUEVA SECCIÓN: ¿POR QUÉ ELEGIRNOS? - EMPIEZA AQUÍ */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-20"
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-extrabold text-[#04348c] sm:text-4xl">
+              ¿POR QUÉ ELEGIRNOS?
+            </h3>
+            <div className="h-1 w-100 bg-yellow-400 mx-auto mt-4"></div>
+            <p className="text-md md:text-xl text-[#04348c]/80 mt-4 max-w-3xl mx-auto">
+              Más que un cambio de batería: una solución completa.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-yellow-400"
+            >
+              <div className="flex items-center mb-3">
+                <div className="bg-yellow-100 rounded-full p-2 mr-3">
+                  <Zap className="h-5 w-5 text-yellow-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900">Control de carga incluido</h4>
+              </div>
+              <p className="text-gray-600">En cada cambio de batería</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-yellow-400"
+            >
+              <div className="flex items-center mb-3">
+                <div className="bg-yellow-100 rounded-full p-2 mr-3">
+                  <Settings className="h-5 w-5 text-yellow-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900">Revisión preventiva</h4>
+              </div>
+              <p className="text-gray-600">Al año sin costo adicional</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-yellow-400"
+            >
+              <div className="flex items-center mb-3">
+                <div className="bg-yellow-100 rounded-full p-2 mr-3">
+                  <Car className="h-5 w-5 text-yellow-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900">Servicio a domicilio</h4>
+              </div>
+              <p className="text-gray-600">En Rosario centro</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-yellow-400"
+            >
+              <div className="flex items-center mb-3">
+                <div className="bg-yellow-100 rounded-full p-2 mr-3">
+                  <Wrench className="h-5 w-5 text-yellow-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900">Instalación profesional</h4>
+              </div>
+              <p className="text-gray-600">En el acto</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-yellow-400"
+            >
+              <div className="flex items-center mb-3">
+                <div className="bg-yellow-100 rounded-full p-2 mr-3">
+                  <Battery className="h-5 w-5 text-yellow-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900">Baterías Moura y Electrobat</h4>
+              </div>
+              <p className="text-gray-600">Para todo tipo de vehículos</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-yellow-400"
+            >
+              <div className="flex items-center mb-3">
+                <div className="bg-yellow-100 rounded-full p-2 mr-3">
+                  <MapPin className="h-5 w-5 text-yellow-600" />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900">Ubicación estratégica</h4>
+              </div>
+              <p className="text-gray-600">En la ciudad</p>
+            </motion.div>
+          </div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            viewport={{ once: true }}
+            className="mt-8 text-center bg-yellow-50 p-6 rounded-lg border border-yellow-200"
+          >
+            <div className="flex items-center justify-center mb-2">
+              <div className="bg-yellow-100 rounded-full p-2 mr-3">
+                <Clock className="h-5 w-5 text-yellow-600" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900">Horarios de Atención</h4>
+            </div>
+            <p className="text-gray-700">
+              <span className="font-medium">Lunes a Viernes:</span> 8:00 - 13:00 / 14:30 - 18:30
+            </p>
+            <p className="text-gray-700">
+              <span className="font-medium">Sábados:</span> 9:00 - 13:00
+            </p>
+          </motion.div>
+        </motion.div>
+        {/* NUEVA SECCIÓN TERMINA AQUÍ */}
+        
       </div>
     </section>
   );
