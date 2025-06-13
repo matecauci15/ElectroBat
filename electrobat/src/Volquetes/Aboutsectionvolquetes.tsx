@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import empresa from './imgs/electrobat.webp';
+import empresa from '../assets/imgs/electrobat.webp';
 import { Wrench, Award, Users, TrendingUp, Zap, Settings, Car, MapPin, Battery, Clock } from 'lucide-react';
 
-export const AboutSection: React.FC = () => {
+export const AboutSectionvolquetes: React.FC = () => {
 
   return (
     <section id="about" className="py-20 bg-gray-100">
@@ -159,25 +159,24 @@ export const AboutSection: React.FC = () => {
             </h3>
             <div className="h-1 md:w-100 w-84 bg-[#e7d21e] mx-auto mt-4"></div>
             <p className="text-md md:text-xl text-[#04348c]/80 mt-4 max-w-3xl mx-auto">
-              Más que un cambio de batería: una solución completa.
+              Alquiler de volquetes seguro y profesional, con mas de 20 años de experiencia
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e]"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e] h-full flex flex-col"
             >
               <div className="flex items-center mb-3">
                 <div className="bg-[#e7d21e]/30 rounded-full p-2 mr-3">
                   <Zap className="h-5 w-5 text-[#e7d21e]" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900">Control de carga incluido</h4>
+                <h4 className="text-lg font-semibold text-gray-900 leading-tight">Volquetes para obras, limpiezas y demoliciones</h4>
               </div>
-              <p className="text-gray-600">En cada cambio de batería</p>
             </motion.div>
             
             <motion.div
@@ -185,15 +184,14 @@ export const AboutSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e]"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e] h-full flex flex-col"
             >
               <div className="flex items-center mb-3">
                 <div className="bg-[#e7d21e]/30 rounded-full p-2 mr-3">
                   <Settings className="h-5 w-5 text-[#e7d21e]" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900">Revisión preventiva</h4>
+                <h4 className="text-lg font-semibold text-gray-900 leading-tight">Coordinación simple por llamada o WhatsApp</h4>
               </div>
-              <p className="text-gray-600">Al año sin costo adicional</p>
             </motion.div>
             
             <motion.div
@@ -201,15 +199,14 @@ export const AboutSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e]"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e] h-full flex flex-col"
             >
               <div className="flex items-center mb-3">
                 <div className="bg-[#e7d21e]/30 rounded-full p-2 mr-3">
                   <Car className="h-5 w-5 text-[#e7d21e]" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900">Servicio a domicilio</h4>
+                <h4 className="text-lg font-semibold text-gray-900 leading-tight">Servicio exclusivo en Rosario ciudad</h4>
               </div>
-              <p className="text-gray-600">En Rosario centro</p>
             </motion.div>
             
             <motion.div
@@ -217,15 +214,14 @@ export const AboutSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e]"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e] h-full flex flex-col"
             >
               <div className="flex items-center mb-3">
                 <div className="bg-[#e7d21e]/30 rounded-full p-2 mr-3">
                   <Wrench className="h-5 w-5 text-[#e7d21e]" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900">Instalación profesional</h4>
+                <h4 className="text-lg font-semibold text-gray-900 leading-tight">Entrega por orden de llegada con horarios flexibles</h4>
               </div>
-              <p className="text-gray-600">En el acto</p>
             </motion.div>
             
             <motion.div
@@ -233,15 +229,14 @@ export const AboutSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e]"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e] h-full flex flex-col"
             >
               <div className="flex items-center mb-3">
                 <div className="bg-[#e7d21e]/30 rounded-full p-2 mr-3">
                   <Battery className="h-5 w-5 text-[#e7d21e]" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900">Baterías Moura y Electrobat</h4>
+                <h4 className="text-lg font-semibold text-gray-900 leading-tight">Retiro fácil y rápido cuando vos lo pedís</h4>
               </div>
-              <p className="text-gray-600">Para todo tipo de vehículos</p>
             </motion.div>
             
             <motion.div
@@ -249,15 +244,14 @@ export const AboutSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e]"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-[#e7d21e] h-full flex flex-col"
             >
               <div className="flex items-center mb-3">
                 <div className="bg-[#e7d21e]/30 rounded-full p-2 mr-3">
                   <MapPin className="h-5 w-5 text-[#e7d21e]" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900">Ubicación estratégica</h4>
+                <h4 className="text-lg font-semibold text-gray-900 leading-tight">Más de 20 años de experiencia local</h4>
               </div>
-              <p className="text-gray-600">En la ciudad</p>
             </motion.div>
           </div>
           

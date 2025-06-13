@@ -215,11 +215,11 @@ export const BatteriesSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-extrabold text-[#04348c] sm:text-4xl">
+          <h2 className="text-3xl font-extrabold uppercase text-[#04348c] sm:text-4xl">
             Nuestras Baterías
           </h2>
-          <div className="h-1 w-76 bg-yellow-500 mx-auto mt-4"></div>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+          <div className="h-1 md:w-93 w-77 bg-[#e7d21e] mx-auto mt-4"></div>
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-[#04348c]/90">
             Energía confiable para todo tipo de vehículos y maquinarias
           </p>
         </motion.div>
@@ -232,7 +232,7 @@ export const BatteriesSection: React.FC = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-xl font-semibold text-gray-800 text-center mb-8">
+          <h3 className="text-xl font-semibold text-[#04348c]/90 text-center mb-8">
             Trabajamos con las mejores marcas
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
@@ -259,7 +259,7 @@ export const BatteriesSection: React.FC = () => {
               onClick={() => setSelectedVehicle('all')}
               className={`cursor-pointer px-4 py-2 text-sm font-medium rounded-l-md border transition-colors ${
                 selectedVehicle === 'all' 
-                  ? 'bg-yellow-500 text-white border-yellow-500' 
+                  ? 'bg-[#e7d21e] text-white border-[#e7d21e]/80' 
                   : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-300'
               }`}
             >
@@ -269,7 +269,7 @@ export const BatteriesSection: React.FC = () => {
               onClick={() => setSelectedVehicle('car')}
               className={`cursor-pointer px-4 py-2 text-sm font-medium border-t border-b border-r transition-colors ${
                 selectedVehicle === 'car' 
-                  ? 'bg-yellow-500 text-white border-yellow-500' 
+                  ? 'bg-[#e7d21e] text-white border-[#e7d21e]/80' 
                   : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-300'
               }`}
             >
@@ -279,7 +279,7 @@ export const BatteriesSection: React.FC = () => {
               onClick={() => setSelectedVehicle('truck')}
               className={`cursor-pointer px-4 py-2 text-sm font-medium border-t border-b border-r transition-colors ${
                 selectedVehicle === 'truck' 
-                  ? 'bg-yellow-500 text-white border-yellow-500' 
+                  ? 'bg-[#e7d21e] text-white border-[#e7d21e]/80' 
                   : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-300'
               }`}
             >
@@ -289,7 +289,7 @@ export const BatteriesSection: React.FC = () => {
               onClick={() => setSelectedVehicle('motorcycle')}
               className={`cursor-pointer px-4 py-2 text-sm font-medium rounded-r-md border-t border-b border-r transition-colors ${
                 selectedVehicle === 'motorcycle' 
-                  ? 'bg-yellow-500 text-white border-yellow-500' 
+                  ? 'bg-[#e7d21e] text-white border-[#e7d21e]/80' 
                   : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-300'
               }`}
             >
@@ -319,7 +319,7 @@ export const BatteriesSection: React.FC = () => {
                   alt={battery.name} 
                   className="w-full h-full object-contain p-4"
                 />
-                <div className="absolute top-3 right-3 rounded-full p-2 bg-yellow-500 shadow-md">
+                <div className="absolute top-3 right-3 rounded-full p-2 bg-[#e7d21e] shadow-md">
                   {battery.vehicleType === 'car' && <FaCar className="text-white text-lg" />}
                   {battery.vehicleType === 'truck' && <FaTruck className="text-white text-lg" />}
                   {battery.vehicleType === 'motorcycle' && <FaMotorcycle className="text-white text-lg" />}
@@ -334,7 +334,7 @@ export const BatteriesSection: React.FC = () => {
                   <ul className="space-y-2">
                     {battery.features.map((feature, i) => (
                       <li key={i} className="text-gray-600 text-sm flex items-center">
-                        <svg className="h-4 w-4 text-yellow-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="h-4 w-4 text-[#e7d21e] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         {feature}
@@ -366,7 +366,7 @@ export const BatteriesSection: React.FC = () => {
           >
             <button
               onClick={loadMore}
-              className="cursor-pointer px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition-colors shadow-md flex items-center"
+              className="cursor-pointer px-6 py-3 bg-[#e7d21e] text-white font-medium rounded-md hover:bg-yellow-600 transition-colors shadow-md flex items-center"
             >
               Ver Más
               <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -393,8 +393,8 @@ export const BatteriesSection: React.FC = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-8 md:p-12">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Servicio de Diagnóstico</h3>
-              <div className="h-1 w-66 bg-yellow-500 mb-6"></div>
+              <h3 className="text-2xl font-bold text-[#04348c]/90 mb-4">Servicio de Diagnóstico</h3>
+              <div className="h-1 w-66 bg-[#e7d21e] mb-6"></div>
               <p className="text-gray-600 mb-6">
                 ¿Problemas con tu batería? Ofrecemos diagnóstico profesional y recomendaciones para extender la vida útil de tu batería.
               </p>
@@ -406,7 +406,7 @@ export const BatteriesSection: React.FC = () => {
                   "Inspección de terminales y cables"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center">
-                    <svg className="h-5 w-5 text-yellow-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-5 w-5 text-[#e7d21e] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <span className="text-gray-700">{item}</span>
@@ -414,7 +414,7 @@ export const BatteriesSection: React.FC = () => {
                 ))}
               </ul>
               <button 
-  className="cursor-pointer px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition-colors shadow-md"
+  className="cursor-pointer px-6 py-3 bg-[#e7d21e] text-white font-medium rounded-md hover:bg-yellow-600 transition-colors shadow-md"
   onClick={() => window.open("https://api.whatsapp.com/send/?phone=5493416868049&text=Hola%21+Queria+consultar+por+el+alquiler+de+volquetes&type=phone_number&app_absent=0", "_blank")}
 >
   Agendar Diagnóstico

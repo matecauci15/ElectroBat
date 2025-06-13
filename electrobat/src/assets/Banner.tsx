@@ -407,8 +407,8 @@ export const Banner: React.FC = () => {
 
               {/* Botón ¿Por qué elegirnos? */}
               <a
-                href="/nosotros"
-                onClick={(e) => scrollToSection(e, "why-choose-us")}
+                href="#about"
+                onClick={(e) => scrollToSection(e, "about")}
                 className="hidden md:inline-flex items-center text-[#e7d21e] hover:text-[#e7d21e] transition-colors border-b border-[#e7d21e] hover:border-[#e7d21e] pb-1 text-base lg:text-lg group font-medium"
               >
                 ¿Por qué elegirnos?
@@ -463,7 +463,7 @@ export const Banner: React.FC = () => {
                   <div className="flex items-center justify-center mb-2 sm:mb-3">
                     {/* <FaClock className="text-[#e7d21e] mr-2" /> */}
                     <h4 className="text-white font-semibold text-sm sm:text-base">
-                      ⏰ HORARIOS
+                      HORARIOS
                     </h4>
                   </div>
                   <div className="text-center text-xs sm:text-sm lg:text-base text-gray-300 space-y-1">

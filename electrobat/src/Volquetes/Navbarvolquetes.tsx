@@ -1,130 +1,8 @@
-// import React, { useState, useEffect } from "react";
-// import ElectroBat from "./imgs/electrobat.png";
-
-// export const Navbar: React.FC = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const [activeSection, setActiveSection] = useState("");
-
-//   const sections = React.useMemo(() => [
-//     { id: "features", label: "Inicio" },
-//     { id: "about", label: "Nosotros" },
-//     { id: "trucks", label: "Volquetes" },
-//     { id: "batteries", label: "Baterías" },
-//     { id: "contacto", label: "Contacto" },
-//   ], []);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       const scrollPosition = window.scrollY + 200; // Ajuste para detección precisa
-
-//       for (const section of sections) {
-//         const element = document.getElementById(section.id);
-//         if (element) {
-//           const { offsetTop, offsetHeight } = element;
-//           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-//             setActiveSection(section.id);
-
-//             // Actualizar la URL sin recargar la página
-//             window.history.pushState(null, "", `#${section.id}`);
-//             break;
-//           }
-//         }
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, [sections]);
-
-//   const handleClick = (id: string) => {
-//     const element = document.getElementById(id);
-//     if (element) {
-//       window.scrollTo({ top: element.offsetTop - 64, behavior: "smooth" });
-//       setIsOpen(false);
-//       setActiveSection(id);
-
-//       // Actualizar la URL al hacer clic
-//       window.history.pushState(null, "", `#${id}`);
-//     }
-//   };
-
-//   // New function to scroll to the banner when logo is clicked
-//   const scrollToBanner = () => {
-//     // Assuming "features" is your banner section ID
-//     const bannerElement = document.getElementById("features");
-//     if (bannerElement) {
-//       window.scrollTo({
-//         top: bannerElement.offsetTop - 64,
-//         behavior: "smooth"
-//       });
-//       setActiveSection("features");
-//       window.history.pushState(null, "", "#features");
-//     }
-//   };
-
-//   return (
-//     <nav className="fixed top-0 w-full bg-gray-900 text-white shadow-md z-50">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="flex justify-between items-center h-16">
-//           {/* Logo - Now clickable */}
-//           <div 
-//             className="flex items-center cursor-pointer" 
-//             onClick={scrollToBanner}
-//           >
-//             <img src={ElectroBat} alt="ElectroBat" className="h-15" />
-//           </div>
-
-//           {/* Desktop Menu */}
-//           <div className="hidden md:flex space-x-6">
-//             {sections.map((section) => (
-//               <button
-//                 key={section.id}
-//                 onClick={() => handleClick(section.id)}
-//                 className={`px-4 py-2 rounded-md transition-all duration-300 ${
-//                   activeSection === section.id ? "bg-[#e7d21e] text-gray-900" : "hover:bg-gray-700"
-//                 }`}
-//               >
-//                 {section.label}
-//               </button>
-//             ))}
-//           </div>
-
-//           {/* Mobile Menu Button */}
-//           <button
-//             onClick={() => setIsOpen(!isOpen)}
-//             className="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700"
-//           >
-//             ☰
-//           </button>
-//         </div>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {isOpen && (
-//         <div className="md:hidden bg-gray-800 p-4">
-//           {sections.map((section) => (
-//             <button
-//               key={section.id}
-//               onClick={() => handleClick(section.id)}
-//               className={`block w-full text-left px-4 py-2 rounded-md transition-all duration-300 ${
-//                 activeSection === section.id ? "bg-[#e7d21e] text-gray-900" : "hover:bg-gray-700"
-//               }`}
-//             >
-//               {section.label}
-//             </button>
-//           ))}
-//         </div>
-//       )}
-//     </nav>
-//   );
-// };
-
-
 import React, { useState, useEffect } from "react";
-import ElectroBat from "./imgs/electrobat.png";
+import ElectroBat from "../assets/imgs/electrobat.png";
 import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbarvolquetes = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [scrolled, setScrolled] = useState(false);
@@ -134,12 +12,10 @@ export const Navbar = () => {
   const sections = React.useMemo(() => [
     { id: "features", label: "Inicio" },
     { id: "about", label: "Nosotros" },
-    { id: "batteries", label: "Baterías" },
-    { id: "contacto", label: "Contacto" },
-    // { id: "trucks", label: "Volquetes" },
+    { id: "reservar", label: "Reservar" },
+    // { id: "inicio", label: "Baterias" },
   ], []);
 
-  
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -265,13 +141,12 @@ export const Navbar = () => {
               >
                 {section.label}
               </button>
-              
             ))}
             <Link
-  to="/ElectroBat/volquetes"
+  to="/ElectroBat"
   className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg text-sm lg:text-base font-medium shadow-md hover:bg-yellow-300 transition-all duration-200"
 >
-  Volquetes
+  Baterias
 </Link>
           </div>
 
@@ -345,4 +220,4 @@ export const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbarvolquetes;

@@ -21,10 +21,10 @@ export const ContactSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-[#04348c] sm:text-4xl uppercase">
               Contáctanos
             </h2>
-            <div className="h-1 w-20 bg-[#e7d21e] mx-auto mt-4"></div>
+            <div className="h-1 w-45 md:w-67 bg-[#e7d21e] mx-auto mt-4"></div>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
               Estamos listos para atender tus necesidades
             </p>
@@ -38,7 +38,7 @@ export const ContactSection: React.FC = () => {
               viewport={{ once: true }}
             >
               <div className="bg-gray-50 rounded-lg shadow-md p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-10">Envíanos un mensaje</h3>
+                <h3 className="text-2xl font-bold text-[#04348c]/90 mb-10">Envíanos un mensaje</h3>
                 <form>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
                     <div>
@@ -101,7 +101,7 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full bg-yellow-400 text-gray-900 font-medium py-3 px-4 mb-24 rounded-md hover:bg-yellow-500 transition-colors"
+                      className="w-full bg-[#e7d21e] text-[#04348c] font-medium py-3 px-4 mb-24 rounded-md hover:bg-yellow-500 transition-colors"
                     >
                       Enviar Mensaje
                     </button>
@@ -121,7 +121,7 @@ export const ContactSection: React.FC = () => {
                 
                 <div className="flex items-start mb-6">
                   <div className="flex-shrink-0">
-                    <svg className="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-6 w-6 text-[#e7d21e]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -134,7 +134,7 @@ export const ContactSection: React.FC = () => {
                 
                 <div className="flex items-start mb-6">
                   <div className="flex-shrink-0">
-                    <FaPhoneAlt className="h-6 w-6 text-yellow-400" />
+                    <FaPhoneAlt className="h-6 w-6 text-[#e7d21e]" />
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-white">Teléfono</h4>
@@ -146,7 +146,7 @@ export const ContactSection: React.FC = () => {
                 
                 <div className="flex items-start mb-6">
                   <div className="flex-shrink-0">
-                    <FaEnvelope className="h-6 w-6 text-yellow-400" />
+                    <FaEnvelope className="h-6 w-6 text-[#e7d21e]" />
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-white">Email</h4>
@@ -157,7 +157,7 @@ export const ContactSection: React.FC = () => {
                 
                 <div className="flex items-start mb-8">
                   <div className="flex-shrink-0">
-                    <svg className="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-6 w-6 text-[#e7d21e]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>

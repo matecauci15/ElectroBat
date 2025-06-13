@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const WhatsAppButton = () => {
+export const Whatsappbutton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -93,4 +93,4 @@ export const WhatsAppButton = () => {
   );
 };
 
-export default WhatsAppButton;
+export default Whatsappbutton;

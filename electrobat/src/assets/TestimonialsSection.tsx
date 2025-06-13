@@ -101,11 +101,13 @@ export const TestimonialsSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
+          
         >
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Lo que dicen nuestros clientes
+          
+          <h2 className="text-3xl uppercase font-extrabold text-[#04348c] sm:text-4xl">
+            nuestros clientes
           </h2>
-          <div className="h-1 w-20 bg-yellow-400 mx-auto mt-4"></div>
+          <div className="h-1 w-78 md:w-92 bg-yellow-400 mx-auto mt-4"></div>
         </motion.div>
 
         <motion.div
