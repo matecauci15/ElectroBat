@@ -26,7 +26,7 @@ export const ContactSection: React.FC = () => {
             </h2>
             <div className="h-1 w-45 md:w-67 bg-[#e7d21e] mx-auto mt-4"></div>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              Estamos listos para atender tus necesidades
+              Atendemos tus necesidades
             </p>
           </motion.div>
           
@@ -48,7 +48,7 @@ export const ContactSection: React.FC = () => {
                       <input
                         type="text"
                         id="name"
-                        className="w-full rounded-md border-gray-300 py-1 shadow-sm focus:border-yellow-500 focus:ring-yellow-500"
+                        className="w-full rounded-md border-gray-300 py-1 shadow-sm focus:border-[#e7d21e] focus:ring-yellow-500"
                       />
                     </div>
                     <div>
@@ -58,7 +58,7 @@ export const ContactSection: React.FC = () => {
                       <input
                         type="email"
                         id="email"
-                        className="w-full rounded-md border-gray-300 shadow-sm py-1 focus:border-yellow-500 focus:ring-yellow-500"
+                        className="w-full rounded-md border-gray-300 shadow-sm py-1 focus:border-[#e7d21e] focus:ring-yellow-500"
                       />
                     </div>
                     <div>
@@ -77,7 +77,7 @@ export const ContactSection: React.FC = () => {
                       </label>
                       <select
                         id="subject"
-                        className="w-full rounded-md border-gray-300 py-1 shadow-sm focus:border-yellow-500 focus:ring-yellow-500"
+                        className="w-full rounded-md border-gray-300 py-1 shadow-sm focus:border-[#e7d21e] focus:ring-yellow-500"
                       >
                         <option>Seleccionar</option>
                         <option>Consulta sobre baterías</option>
@@ -95,7 +95,7 @@ export const ContactSection: React.FC = () => {
                     <textarea
                       id="message"
                       rows={4}
-                      className="w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500"
+                      className="w-full rounded-md border-gray-300 shadow-sm focus:border-[#e7d21e] focus:ring-yellow-500"
                     ></textarea>
                   </div>
                   <div>

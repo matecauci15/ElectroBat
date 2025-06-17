@@ -12,7 +12,8 @@ import CTAInmediataSectionvolquetes from '../Volquetes/ctainmediatovolquetes';
 import VolquetesCTASection from '../Volquetes/volquetesctainmediato';
 import { AboutSectionvolquetes } from '../Volquetes/Aboutsectionvolquetes';
 import { Cuandonecesitas } from '../Volquetes/cuandonecesitas';
-import { CTAFinalSimplevolquetes } from '../Volquetes/CTAfinalVOLQUETES';
+import { CTAFinalSimplevolquetes } from '../Volquetes/CTAfinalvolquetes';
+import { VolquetesSection } from '../Volquetes/Volquetes';
 
 export default function VolquetesLanding() {
   return (
@@ -39,6 +40,9 @@ export default function VolquetesLanding() {
         </section> */}
         <section id="cuandonecesitas">
         <Cuandonecesitas />
+        </section>
+        <section id="volquetes">
+        <VolquetesSection />
         </section>
         <section>
           <CTAFinalSimplevolquetes />

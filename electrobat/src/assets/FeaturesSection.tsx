@@ -13,32 +13,32 @@ export const FeaturesSection: React.FC = () => {
     {
       title: "Baterías de Alto Rendimiento",
       description: "Ofrecemos baterías para todo tipo de maquinaria pesada con garantía de durabilidad y rendimiento.",
-      icon: <FaBatteryFull className="h-8 w-8 text-yellow-500" />
+      icon: <FaBatteryFull className="h-8 w-8 text-[#e7d21e]" />
     },
     {
       title: "Volquetes para Proyectos",
       description: "Contamos con volquetes de diferentes capacidades para proyectos de construcción y movimiento de tierra.",
-      icon: <FaTruckMoving className="h-8 w-8 text-yellow-500" />
+      icon: <FaTruckMoving className="h-8 w-8 text-[#e7d21e]" />
     },
     {
       title: "Mantenimiento Preventivo",
       description: "Servicio de mantenimiento preventivo para maximizar la vida útil de sus baterías y equipos.",
-      icon: <FaToolbox className="h-8 w-8 text-yellow-500" />
+      icon: <FaToolbox className="h-8 w-8 text-[#e7d21e]" />
     },
     {
       title: "Reciclaje Responsable",
       description: "Nos encargamos del reciclaje adecuado de baterías usadas, cumpliendo con normas ambientales.",
-      icon: <FaRecycle className="h-8 w-8 text-yellow-500" />
+      icon: <FaRecycle className="h-8 w-8 text-[#e7d21e]" />
     },
     {
       title: "Garantía Extendida",
       description: "Todos nuestros productos cuentan con garantía extendida para su tranquilidad y seguridad.",
-      icon: <FaShieldAlt className="h-8 w-8 text-yellow-500" />
+      icon: <FaShieldAlt className="h-8 w-8 text-[#e7d21e]" />
     },
     {
       title: "Soporte Técnico 24/7",
       description: "Asistencia técnica disponible las 24 horas para atender cualquier emergencia que pueda surgir.",
-      icon: <FaHeadset className="h-8 w-8 text-yellow-500" />
+      icon: <FaHeadset className="h-8 w-8 text-[#e7d21e]" />
     }
   ];
 
@@ -55,7 +55,7 @@ export const FeaturesSection: React.FC = () => {
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Nuestros Servicios
           </h2>
-          <div className="h-1 w-20 bg-yellow-400 mx-auto mt-4"></div>
+          <div className="h-1 w-20 bg-[#e7d21e] mx-auto mt-4"></div>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
             Soluciones integrales para satisfacer todas sus necesidades
           </p>

@@ -111,7 +111,7 @@ const CTAInmediataSectionvolquetes = () => {
               className="cursor-pointer w-full bg-white text-[#04348c] border-2 border-[#04348c] hover:bg-[#04348c] hover:text-white transition-all duration-300 rounded-xl p-4 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-5 h-5" />
+                <MapPin className="w-5 h-5 text-[#e7d21e]" />
                 <span className="font-bold text-sm">CÓMO LLEGAR</span>
               </div>
             </button>

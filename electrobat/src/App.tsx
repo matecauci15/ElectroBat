@@ -125,7 +125,7 @@ function LandingPrincipal() {
 
 function App() {
   return (
-    <Routes>
+    <Routes> 
       <Route path="/electrobat" element={<LandingPrincipal />} />
       <Route path="/electrobat/volquetes" element={<VolquetesLanding />} />
     </Routes>

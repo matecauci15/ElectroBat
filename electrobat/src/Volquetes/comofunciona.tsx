@@ -81,31 +81,31 @@ export const Comofunciona: React.FC = () => {
       {/* Efecto de elevación flotante */}
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-transparent pointer-events-none"></div>
       
-      <section ref={sectionRef} className="py-12 relative z-10">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <section ref={sectionRef} className="py-8 md:py-12 relative z-10">
+        <div className="container mx-auto px-3 md:px-4 max-w-6xl">
           {/* Header */}
           <div 
             ref={setElementRef('header')}
             data-animate="header"
-            className={`text-center mb-10 transition-all duration-1000 ${
+            className={`text-center mb-6 md:mb-10 transition-all duration-1000 ${
               visibleElements.header 
                 ? 'opacity-100 transform translate-y-0' 
                 : 'opacity-0 transform translate-y-10'
             }`}
           >
-            <h2 className="text-3xl uppercase md:text-4xl font-bold text-[#2d4a22] mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl uppercase font-bold text-[#04348c] mb-3 md:mb-4">
               ¿Cómo Funciona?
             </h2>
             
             <div className="max-w-2xl mx-auto">
-              <p className="text-lg md:text-xl text-[#2d4a22]/80 mb-3 font-semibold">
+              <p className="text-base md:text-lg lg:text-xl text-[#04348c]/80 mb-2 md:mb-3 font-semibold">
                 Necesitás un volquete en tu domicilio, edificio o terreno.
               </p>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-base md:text-lg text-gray-600 mb-3 md:mb-4">
                 Te lo resolvemos en 3 pasos simples:
               </p>
-              <div className="inline-flex items-center bg-[#e7d21e] text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-md">
-                <AlertTriangle className="w-4 h-4 mr-2" />
+              <div className="inline-flex items-center bg-[#e7d21e] text-white px-4 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-xs md:text-sm shadow-md">
+                <AlertTriangle className="w-3 h-3 md:w-4 md:h-4 mr-2" />
                 Servicio rápido y confiable
               </div>
             </div>
@@ -113,7 +113,7 @@ export const Comofunciona: React.FC = () => {
 
           {/* Flow de pasos */}
           <div className="relative">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
               {/* Paso 1 */}
               <div 
                 ref={setElementRef('step1')}
@@ -125,25 +125,25 @@ export const Comofunciona: React.FC = () => {
                 }`}
               >
                 <div className="text-center flex-1 flex flex-col">
-                  <div className="text-[120px] md:text-[150px] font-black text-[#e7d21e]/60 leading-none mb-4 select-none">
+                  <div className="text-[80px] md:text-[120px] lg:text-[150px] font-black text-[#e7d21e]/60 leading-none mb-2 md:mb-4 select-none">
                     1
                   </div>
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-[#e7d21e] -mt-16 relative z-10 transform hover:scale-105 transition-all duration-300 flex-1 flex flex-col">
-                    <div className="flex justify-center space-x-2 mb-4">
-                      <Phone className="w-8 h-8 text-[#e7d21e]" />
-                      <MessageCircle className="w-8 h-8 text-[#e7d21e]" />
+                  <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-xl border-2 border-[#e7d21e] -mt-10 md:-mt-16 relative z-10 transform hover:scale-105 transition-all duration-300 flex-1 flex flex-col">
+                    <div className="flex justify-center space-x-2 mb-3 md:mb-4">
+                      <Phone className="w-6 h-6 md:w-8 md:h-8 text-[#e7d21e]" />
+                      <MessageCircle className="w-6 h-6 md:w-8 md:h-8 text-[#e7d21e]" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#2d4a22] mb-4">
+                    <h3 className="text-lg md:text-xl font-bold text-[#04348c]/90 mb-3 md:mb-4">
                       Nos llamás o escribís
                     </h3>
-                    <div className="space-y-3 mb-6 flex-1">
-                      <div className="bg-gray-50 rounded-lg p-3 border-l-4 border-[#e7d21e]">
-                        <p className="text-[#2d4a22] font-medium text-sm leading-relaxed">
+                    <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-1">
+                      <div className="bg-gray-50 rounded-lg p-2 md:p-3 border-l-4 border-[#e7d21e]">
+                        <p className="text-[#2d4a22] font-medium text-xs md:text-sm leading-relaxed">
                           Coordinás disponibilidad, tipo de volquete y dirección
                         </p>
                       </div>
-                      <div className="bg-gray-50 rounded-lg p-3 border-l-4 border-[#e7d21e]">
-                        <p className="text-[#2d4a22] font-medium text-sm leading-relaxed">
+                      <div className="bg-gray-50 rounded-lg p-2 md:p-3 border-l-4 border-[#e7d21e]">
+                        <p className="text-[#2d4a22] font-medium text-xs md:text-sm leading-relaxed">
                           Atención directa y sin formularios complicados
                         </p>
                       </div>
@@ -152,18 +152,18 @@ export const Comofunciona: React.FC = () => {
                       <button
                         id="cta-volquetes-phone-step1"
                         onClick={handlePhoneClick}
-                        className="cursor-pointer flex-1 flex items-center justify-center px-3 py-2 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-all duration-300 shadow-md text-sm"
+                        className="cursor-pointer flex-1 flex items-center justify-center px-2 md:px-3 py-2 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-all duration-300 shadow-md text-xs md:text-sm"
                       >
-                        <Phone className="mr-1 w-4 h-4" />
+                        <Phone className="mr-1 w-3 h-3 md:w-4 md:h-4 text-[#e7d21e]" />
                         LLAMAR
                       </button>
                       <button
                         id="cta-volquetes-whatsapp-step1"
                         onClick={handleWhatsAppClick}
-                        className="cursor-pointer flex-1 flex items-center justify-center px-3 py-2 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-all duration-300 shadow-md text-sm"
+                        className="cursor-pointer flex-1 flex items-center justify-center px-2 md:px-3 py-2 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-all duration-300 shadow-md text-xs md:text-sm"
                       >
                         <svg
-                        className="mr-2 w-4 h-4 sm:w-5 sm:h-5 text-[#e7d21e] group-hover:text-[#04348c] transition-colors"
+                        className="mr-1 md:mr-2 w-3 h-3 md:w-4 md:h-4 text-[#e7d21e] group-hover:text-[#04348c] transition-colors"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -191,22 +191,22 @@ export const Comofunciona: React.FC = () => {
                 }`}
               >
                 <div className="text-center flex-1 flex flex-col">
-                  <div className="text-[120px] md:text-[150px] font-black text-[#e7d21e]/60 leading-none mb-4 select-none">
+                  <div className="text-[80px] md:text-[120px] lg:text-[150px] font-black text-[#e7d21e]/60 leading-none mb-2 md:mb-4 select-none">
                     2
                   </div>
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-[#e7d21e] -mt-16 relative z-10 transform hover:scale-105 transition-all duration-300 flex-1 flex flex-col">
-                    <Truck className="w-10 h-10 text-[#e7d21e] mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-[#2d4a22] mb-4">
+                  <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-xl border-2 border-[#e7d21e] -mt-10 md:-mt-16 relative z-10 transform hover:scale-105 transition-all duration-300 flex-1 flex flex-col">
+                    <Truck className="w-8 h-8 md:w-10 md:h-10 text-[#e7d21e] mx-auto mb-3 md:mb-4" />
+                    <h3 className="text-lg md:text-xl font-bold text-[#04348c] mb-3 md:mb-4">
                       Lo llevamos a tu ubicación
                     </h3>
-                    <div className="space-y-3 flex-1 flex flex-col justify-center">
-                      <div className="bg-gray-50 rounded-lg p-3 border-l-4 border-[#e7d21e]">
-                        <p className="text-[#2d4a22] font-medium text-sm leading-relaxed">
+                    <div className="space-y-2 md:space-y-3 flex-1 flex flex-col justify-center">
+                      <div className="bg-gray-50 rounded-lg p-2 md:p-3 border-l-4 border-[#e7d21e]">
+                        <p className="text-[#2d4a22] font-medium text-xs md:text-sm leading-relaxed">
                           Servicio por orden de llegada
                         </p>
                       </div>
-                      <div className="bg-gray-50 rounded-lg p-3 border-l-4 border-[#e7d21e]">
-                        <p className="text-[#2d4a22] font-medium text-sm leading-relaxed">
+                      <div className="bg-gray-50 rounded-lg p-2 md:p-3 border-l-4 border-[#e7d21e]">
+                        <p className="text-[#2d4a22] font-medium text-xs md:text-sm leading-relaxed">
                           Coordinamos el mejor horario
                         </p>
                       </div>
@@ -230,22 +230,22 @@ export const Comofunciona: React.FC = () => {
                 }`}
               >
                 <div className="text-center flex-1 flex flex-col">
-                  <div className="text-[120px] md:text-[150px] font-black text-[#e7d21e]/60 leading-none mb-4 select-none">
+                  <div className="text-[80px] md:text-[120px] lg:text-[150px] font-black text-[#e7d21e]/60 leading-none mb-2 md:mb-4 select-none">
                     3
                   </div>
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-[#e7d21e] -mt-16 relative z-10 transform hover:scale-105 transition-all duration-300 flex-1 flex flex-col">
-                    <Truck className="w-10 h-10 text-[#e7d21e] mx-auto mb-4 transform rotate-180" />
-                    <h3 className="text-xl font-bold text-[#2d4a22] mb-4">
+                  <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-xl border-2 border-[#e7d21e] -mt-10 md:-mt-16 relative z-10 transform hover:scale-105 transition-all duration-300 flex-1 flex flex-col">
+                    <Truck className="w-8 h-8 md:w-10 md:h-10 text-[#e7d21e] mx-auto mb-3 md:mb-4 transform rotate-180" />
+                    <h3 className="text-lg md:text-xl font-bold text-[#04348c]/90 mb-3 md:mb-4">
                       Lo retiramos cuando lo pedís
                     </h3>
-                    <div className="space-y-3 flex-1 flex flex-col justify-center">
-                      <div className="bg-gray-50 rounded-lg p-3 border-l-4 border-[#e7d21e]">
-                        <p className="text-[#2d4a22] font-medium text-sm leading-relaxed">
+                    <div className="space-y-2 md:space-y-3 flex-1 flex flex-col justify-center">
+                      <div className="bg-gray-50 rounded-lg p-2 md:p-3 border-l-4 border-[#e7d21e]">
+                        <p className="text-[#2d4a22] font-medium text-xs md:text-sm leading-relaxed">
                           Coordinás el retiro cuando terminás
                         </p>
                       </div>
-                      <div className="bg-gray-50 rounded-lg p-3 border-l-4 border-[#e7d21e]">
-                        <p className="text-[#2d4a22] font-bold text-sm leading-relaxed">
+                      <div className="bg-gray-50 rounded-lg p-2 md:p-3 border-l-4 border-[#e7d21e]">
+                        <p className="text-[#2d4a22] font-bold text-xs md:text-sm leading-relaxed">
                           Servicio práctico y puntual
                         </p>
                       </div>

@@ -119,14 +119,14 @@ export const BatteryReplacementSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-white border-2 border-[#e7d21e] rounded-lg p-4 text-center"
+          className="bg-white border-2 border-[#e7d21e] rounded-lg p-6 text-center"
         >
           <h3 className="md:text-lg font-bold text-[#04348c] mb-2 text-md">
             En Electrobat te revisamos la batería al momento del cambio y
             además:
           </h3>
 
-          <div className="flex items-center justify-center md:text-md text-xs  text-gray-700 mb-2">
+          <div className="flex items-center justify-center md:text-md text-md  text-gray-700 mb-2">
             {/* <span className="mr-2">🔧</span> */}
             <span>
               <strong>
@@ -135,11 +135,6 @@ export const BatteryReplacementSection = () => {
               </strong>
             </span>
           </div>
-
-          {/* <div className="flex items-center justify-center text-sm text-gray-700 mb-4"> */}
-          {/* <span className="mr-2">📱</span> */}
-          {/* <span><strong>¡Escribinos y evitá quedarte varado!</strong></span> */}
-          {/* </div> */}
 
 <a
   href="https://wa.me/5493416868049?text=Hola%20Electrobat!%20Quiero%20consultar%20por%20la%20revisión%20de%20mi%20batería."

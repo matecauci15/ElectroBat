@@ -270,9 +270,9 @@ export const AboutSection: React.FC = () => {
           >
             <div className="flex items-center justify-center mb-2">
               <div className="bg-[#e7d21e]/30 rounded-full p-2 mr-3">
-                <Clock className="h-5 w-5 text-yellow-600" />
+                <Clock className="h-5 w-5 text-[#e7d21e]" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900">Horarios de Atención</h4>
+              <h4 className="text-xl font-semibold text-[#04348c]">Horarios de Atención</h4>
             </div>
             <p className="text-gray-700">
               <span className="font-medium">Lunes a Viernes:</span> 8:00 - 13:00 / 14:30 - 18:30

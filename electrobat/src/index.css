@@ -69,3 +69,6 @@ button:focus-visible {
 /* @import "tailwindcss/tailwind.css"; */
 @import "tailwindcss";
 
+html, body {
+  overflow-x: hidden;
+}
