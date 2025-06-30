@@ -71,11 +71,11 @@ import { Whatsappbutton } from './Components/whappbutton';
 import DomicilioSections from './assets/cambioadomicilio';
 import CTAInmediataSection from './assets/ctainmediato';
 import { BatteryReplacementSection } from './Components/cambiobateria';
-import CTAFinalSimple from './Components/CTAfinal';
+// import CTAFinalSimple from './Components/CTAfinal';
 import Navbar from './assets/Navbar';
 import { AboutSection } from './assets/Aboutsection';
 import { Banner } from './assets/banner';
-import { ContactSection } from './assets/Contactsection';
+// import { ContactSection } from './assets/Contactsection';
 import { BatteriesSection } from './assets/Batteriessection';
 import { TestimonialsSection } from './assets/TestimonialsSection';
 import { Footer } from './assets/Footer';
@@ -95,8 +95,8 @@ function LandingPrincipal() {
       <main>
         <section id="features">
           <Banner />
-          <DomicilioSections />
           <CTAInmediataSection />
+          <DomicilioSections />
         </section>
         <section id="about">
           <AboutSection />
@@ -110,12 +110,12 @@ function LandingPrincipal() {
         <section id="testimonials">
           <TestimonialsSection />
         </section>
-        <section id="contacto">
+        {/* <section id="contacto">
           <ContactSection />
-        </section>
-        <section>
+        </section> */}
+        {/* <section>
           <CTAFinalSimple />
-        </section>
+        </section> */}
       </main>
       <Whatsappbutton />
       <Footer />

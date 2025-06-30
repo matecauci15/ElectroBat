@@ -221,7 +221,7 @@ export const Cuandonecesitas = () => {
         </div>
 
         {/* Llamada a la acción */}
-        <div
+        {/* <div
           ref={setElementRef('cta')}
           data-animate="cta"
           className={`text-center transition-all duration-1000 delay-400 ${
@@ -248,7 +248,7 @@ export const Cuandonecesitas = () => {
               </button>
             </a>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>

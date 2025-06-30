@@ -310,7 +310,7 @@ export const Banner: React.FC = () => {
       >
         {/* Background */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-900 via-gray-900 to-black opacity-90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-600 opacity-90"></div>
           {/* Animated background elements for desktop */}
           <div className="hidden lg:block absolute top-20 left-10 w-32 h-32 bg-yellow-400/10 rounded-full blur-xl animate-pulse"></div>
           <div className="hidden lg:block absolute bottom-20 right-10 w-24 h-24 bg-blue-400/10 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -342,7 +342,7 @@ export const Banner: React.FC = () => {
               {/* H1 - Título Principal */}
               <div className="mb-6 lg:mb-8">
                 <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-white leading-tight">
-                  Cambio de baterías para autos y camionetas
+                  Cambio de baterías para todos los vehículos
                   <div className="flex text-[#efd816] flex-row items-center justify-center lg:justify-start mt-2">
                     <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />
                     <span className="xl:text-2xl ml-1 uppercase text-xl block text-white font-semibold">
@@ -387,7 +387,7 @@ export const Banner: React.FC = () => {
                       WHATSAPP
                     </div>
                     <div className="text-xs sm:text-sm opacity-90 font-normal leading-tight">
-                      Consultar precio o asesoramiento. Siempre tenemos stock
+                      Consultar precio o asesoramientos. Stock disponible
                     </div>
                   </div>
                 </button>
@@ -429,12 +429,12 @@ export const Banner: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="order-2"
             >
-              <div className="bg-gray-800/90  border-2 border-[#e7d21e] rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm hover:border-[#e7d21e]/80 hover:bg-gray-800/95 transition-all duration-300 max-w-md mx-auto lg:max-w-none">
+              <div className="bg-gray-800/60  border-2 border-[#e7d21e] rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm hover:border-[#e7d21e]/80 hover:bg-gray-800/75 transition-all duration-300 max-w-md mx-auto lg:max-w-none">
                 {/* CTA Texto Destacado */}
                 <div className="text-center mb-4 sm:mb-6">
                   <div className="flex items-center justify-center space-x-3 mb-3 sm:mb-4">
                     <h3 className="text-md sm:text-xl lg:text-xl font-semibold text-white">
-                      VENÍ AL TALLER Y SALÍ CON BATERÍA NUEVA
+                      VENÍ AL LOCAL Y SALÍ CON BATERÍA NUEVA
                     </h3>
                   </div>
                 </div>
@@ -444,7 +444,7 @@ export const Banner: React.FC = () => {
                   <button
                     id="cta-workshop-maps"
                     onClick={handleMapsClick}
-                    className="cursor-pointer flex items-center justify-center px-4 py-2 sm:px-6 sm:py-4 lg:py-5 border-2 border-white text-sm sm:text-base lg:text-lg rounded-xl text-white bg-transparent hover:bg-[#04348c] hover:text-white hover:scale-102 transition-all duration-300 backdrop-blur-sm group max-w-xs sm:max-w-sm lg:max-w-2xl md:w-full"
+                    className="cursor-pointer flex items-center font-bold justify-center px-4 py-2 sm:px-6 sm:py-4 lg:py-5 border-2 border-white text-sm sm:text-base lg:text-lg rounded-xl text-white bg-transparent hover:bg-[#04348c] hover:text-white hover:scale-102 transition-all duration-300 backdrop-blur-sm group max-w-xs sm:max-w-sm lg:max-w-2xl md:w-full"
                   >
                     <MapPinned className="text-[#e7d21e] mr-2" />
                     CÓMO LLEGAR
@@ -471,7 +471,7 @@ export const Banner: React.FC = () => {
                       <strong>Lunes a Viernes:</strong> 8:00–13:00 / 14:30–18:30
                     </p>
                     <p>
-                      <strong>Sábados:</strong> 9:00–13:00
+                      <strong>Sábados:</strong> 8:30–13:00
                     </p>
                   </div>
                 </div>

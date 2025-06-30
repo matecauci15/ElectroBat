@@ -12,7 +12,7 @@ import CTAInmediataSectionvolquetes from '../Volquetes/ctainmediatovolquetes';
 import VolquetesCTASection from '../Volquetes/volquetesctainmediato';
 import { AboutSectionvolquetes } from '../Volquetes/Aboutsectionvolquetes';
 import { Cuandonecesitas } from '../Volquetes/cuandonecesitas';
-import { CTAFinalSimplevolquetes } from '../Volquetes/CTAfinalvolquetes';
+// import { CTAFinalSimplevolquetes } from '../Volquetes/CTAfinalvolquetes';
 import { VolquetesSection } from '../Volquetes/Volquetes';
 
 export default function VolquetesLanding() {
@@ -29,8 +29,14 @@ export default function VolquetesLanding() {
         <section id='reservar'>
         <CTAInmediataSectionvolquetes />
         </section>
+        <section id="cuandonecesitas">
+        <Cuandonecesitas />
+        </section>
         <section id="about">
           <AboutSectionvolquetes />
+        </section>
+        <section id="volquetes">
+        <VolquetesSection />
         </section>
         <section id="testimonials">
           <TestimonialsSection />
@@ -38,15 +44,9 @@ export default function VolquetesLanding() {
         {/* <section id="contacto">
           <ContactSection />
         </section> */}
-        <section id="cuandonecesitas">
-        <Cuandonecesitas />
-        </section>
-        <section id="volquetes">
-        <VolquetesSection />
-        </section>
-        <section>
+        {/* <section>
           <CTAFinalSimplevolquetes />
-        </section>
+        </section> */}
       </main>
       <Whatsappbutton />
       <Footer />

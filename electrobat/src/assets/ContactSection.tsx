@@ -24,7 +24,7 @@ export const ContactSection: React.FC = () => {
             <h2 className="text-3xl font-extrabold text-[#04348c] sm:text-4xl uppercase">
               Contáctanos
             </h2>
-            <div className="h-1 w-45 md:w-67 bg-[#e7d21e] mx-auto mt-4"></div>
+            <div className="h-1 w-52 md:w-64 rounded-xl bg-[#e7d21e] mx-auto mt-4"></div>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
               Atendemos tus necesidades
             </p>

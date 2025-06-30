@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Instagram } from "lucide-react";
 
 const CTAInmediataSection = () => {
   const handlePhoneClick = () => {
     window.location.href = 'tel:+5493416868049';
+  };
+
+  const handleInstagramClick = () => {
+    window.location.href = 'https://www.instagram.com/electrobatrosario';
   };
 
   const handleWhatsAppClick = () => {
@@ -50,12 +54,12 @@ const CTAInmediataSection = () => {
           </h2>
           
           <p className="text-base md:text-lg text-gray-700 mb-4">
-            Tocá uno de estos botones y te ayudamos al instante:
+            Llamanos o escribinos:
           </p>
         </motion.div>
 
         {/* Botones CTA compactos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
           
           {/* LLAMAR AHORA */}
           <motion.div
@@ -113,6 +117,22 @@ const CTAInmediataSection = () => {
               <div className="flex items-center justify-center space-x-3">
                 <MapPin className="w-5 h-5 text-[#e7d21e]" />
                 <span className="font-bold text-sm">CÓMO LLEGAR</span>
+              </div>
+            </button>
+          </motion.div>
+                    <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <button
+              id="cta-maps-inmediato"
+              onClick={handleInstagramClick}
+              className="cursor-pointer w-full bg-white text-[#04348c] border-2 border-[#04348c] hover:bg-[#04348c] hover:text-white transition-all duration-300 rounded-xl p-4 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <div className="flex items-center justify-center space-x-3">
+                <Instagram className="w-5 h-5 text-[#e7d21e]" />
+                <span className="font-bold text-sm">INSTAGRAM</span>
               </div>
             </button>
           </motion.div>

@@ -97,7 +97,7 @@
 
 //     return () => {
 //       document.removeEventListener('click', handleClickOutside);
-//       document.body.style.overflow = 'unset';
+//       document.body.style.overflow = '';
 //     };
 //   }, [isOpen]);
 
@@ -145,18 +145,18 @@
 //             ))}
 //             <Link
 //               to="/ElectroBat"
-//               className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg text-sm lg:text-base font-medium shadow-md hover:bg-yellow-300 transition-all duration-200"
+//               className="text-white px-4 py-2 rounded-lg text-sm lg:text-base font-medium shadow-md hover:bg-yellow-300 transition-all duration-200"
 //             >
 //               Baterias
 //             </Link>
 //           </div>
 
-//           {/* Mobile Menu Button - Solo visible cuando se scrollea hacia arriba */}
+//           {/* Mobile Menu Button - Siempre visible al inicio, luego sigue la lógica normal */}
 //           <div
 //             className={`cursor-pointer md:hidden z-10 transition-all duration-300 ${
-//               lastScrollY > 10 && visible
+//               lastScrollY <= 10 || (lastScrollY > 10 && visible)
 //                 ? "opacity-100 visible"
-//                 : "opacity-0 invisible md:opacity-100 md:visible"
+//                 : "opacity-0 invisible"
 //             }`}
 //           >
 //             <button
@@ -224,7 +224,7 @@
 //             ))}
 //             <Link
 //               to="/ElectroBat"
-//               className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg text-sm lg:text-base font-medium shadow-md hover:bg-yellow-300 transition-all duration-200"
+//               className=" text-white px-4 py-4 rounded-lg text-base lg:text-base font-medium shadow-md hover:bg-yellow-300 transition-all duration-200"
 //               replace
 //               onClick={() => {
 //                 setTimeout(() => window.scrollTo(0, 0), 0);
@@ -250,9 +250,10 @@
 
 // export default Navbarvolquetes;
 
-
 import React, { useState, useEffect } from "react";
-import ElectroBat from "../assets/imgs/electrobat.png";
+// import ElectroBat from "./imgs/electrobat.png";
+// import logo from "./imgs/logo.png";
+import logo from "../assets/imgs/logo.png";
 import { Link } from "react-router-dom";
 
 export const Navbarvolquetes = () => {
@@ -265,10 +266,11 @@ export const Navbarvolquetes = () => {
   const sections = React.useMemo(() => [
     { id: "features", label: "Inicio" },
     { id: "about", label: "Nosotros" },
-    { id: "reservar", label: "Reservar" },
-    // { id: "inicio", label: "Baterias" },
+    { id: "contacto", label: "Contacto" },
+    // { id: "trucks", label: "Volquetes" },
   ], []);
 
+  
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -350,17 +352,17 @@ export const Navbarvolquetes = () => {
 
     return () => {
       document.removeEventListener('click', handleClickOutside);
-      document.body.style.overflow = '';
+      document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 w-full text-white z-50 transition-transform duration-200 ease-out ${
+      className={`fixed top-0 left-0 right-0 w-full text-white z-50 transition-all duration-300 ease-out ${
         visible ? "translate-y-0" : "-translate-y-full"
       } ${
-        scrolled
-          ? "bg-gradient-to-br from-blue-900/95 via-gray-900/98 to-black/95 backdrop-blur-md shadow-xl"
+        scrolled || isOpen
+          ? "bg-gradient-to-br from-blue-500 via-blue-700 to-blue-950 backdrop-blur-md shadow-xl"
           : "bg-transparent backdrop-blur-none shadow-none border-b border-transparent"
       }`}
     >
@@ -373,9 +375,9 @@ export const Navbarvolquetes = () => {
               onClick={scrollToBanner}
             >
               <img
-                src={ElectroBat}
+                src={logo}
                 alt="ElectroBat"
-                className="h-14 w-auto sm:h-12 md:h-14 lg:h-16 object-contain transition-all duration-200 group-hover:scale-105"
+                className="max-w-[40vw] h-14 w-auto sm:h-12 md:h-14 lg:h-8 object-contain transition-transform duration-200 group-hover:scale-105"
                 style={{ imageRendering: "crisp-edges" }}
               />
             </div>
@@ -398,13 +400,13 @@ export const Navbarvolquetes = () => {
             ))}
             <Link
               to="/ElectroBat"
-              className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg text-sm lg:text-base font-medium shadow-md hover:bg-yellow-300 transition-all duration-200"
+              className="text-white px-4 py-2 rounded-lg text-sm lg:text-base font-medium hover:bg-yellow-300 hover:text-gray-900 transition-all duration-200"
             >
               Baterias
             </Link>
           </div>
 
-          {/* Mobile Menu Button - Siempre visible al inicio, luego sigue la lógica normal */}
+          {/* Mobile Menu Button */}
           <div
             className={`cursor-pointer md:hidden z-10 transition-all duration-300 ${
               lastScrollY <= 10 || (lastScrollY > 10 && visible)
@@ -414,16 +416,16 @@ export const Navbarvolquetes = () => {
           >
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`cursor-pointer p-2 rounded-lg transition-all duration-200 ${
+              className={`cursor-pointer p-2 rounded-lg transition-all duration-300 ${
                 isOpen
-                  ? "bg-[#e7d21e] text-gray-900"
+                  ? "bg-[#e7d21e] text-gray-900 rotate-180"
                   : "text-white hover:text-[#e7d21e] hover:bg-white/10"
               }`}
               aria-label="Abrir menú"
               aria-expanded={isOpen}
             >
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 transition-transform duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -449,51 +451,93 @@ export const Navbarvolquetes = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Mejorado con continuidad visual */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 transition-all duration-300 ease-in-out ${
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-out ${
           isOpen
-            ? "opacity-100 visible transform translate-y-0"
-            : "opacity-0 invisible transform -translate-y-4"
+            ? "max-h-96 opacity-100"
+            : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-gray-900/98 backdrop-blur-md shadow-2xl border-t border-white/10">
-          <div className="px-4 py-4 space-y-2 max-w-7xl mx-auto">
-            {sections.map((section, index) => (
-              <button
-                key={section.id}
-                onClick={() => handleClick(section.id)}
-                className={`pointer block w-full text-left px-4 py-4 rounded-lg transition-all duration-200 font-medium text-base ${
-                  activeSection === section.id
-                    ? "bg-[#e7d21e] text-gray-900 shadow-md"
-                    : "hover:bg-white/10 hover:text-[#e7d21e] text-white/90 hover:translate-x-2"
-                }`}
-                style={{
-                  animationDelay: isOpen ? `${index * 50}ms` : "0ms",
-                }}
-              >
-                {section.label}
-              </button>
-            ))}
-            <Link
-              to="/ElectroBat"
-              className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg text-sm lg:text-base font-medium shadow-md hover:bg-yellow-300 transition-all duration-200"
-              replace
-              onClick={() => {
-                setTimeout(() => window.scrollTo(0, 0), 0);
-                setIsOpen(false);
+        {/* Línea separadora sutil */}
+        <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-4"></div>
+        
+        <div className="px-4 py-6 space-y-1">
+          {sections.map((section, index) => (
+            <button
+              key={section.id}
+              onClick={() => handleClick(section.id)}
+              className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 font-medium text-base group relative overflow-hidden ${
+                activeSection === section.id
+                  ? "bg-gradient-to-r from-[#e7d21e] to-[#f4e051] text-gray-900 shadow-lg transform scale-[1.02]"
+                  : "text-white/90 hover:text-white hover:bg-white/5 hover:translate-x-2"
+              }`}
+              style={{
+                animationDelay: isOpen ? `${index * 100}ms` : "0ms",
+                transform: isOpen ? "translateX(0)" : "translateX(-20px)",
+                opacity: isOpen ? 1 : 0,
+                transition: `all 0.4s ease-out ${index * 50}ms`,
               }}
             >
-              Baterias
-            </Link>
-          </div>
+              {/* Efecto de brillo en hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+              
+              <div className="relative flex items-center justify-between">
+                <span className="relative z-10">{section.label}</span>
+                <svg 
+                  className={`w-5 h-5 transition-all duration-300 ${
+                    activeSection === section.id 
+                      ? "text-gray-700 rotate-0" 
+                      : "text-white/50 group-hover:text-[#e7d21e] group-hover:translate-x-1"
+                  }`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </button>
+          ))}
+          
+          {/* Volquetes Link */}
+          <Link
+            to="/ElectroBat/"
+            className="block w-full text-left px-6 py-4 rounded-xl text-base font-medium text-white/90 hover:text-white hover:bg-gradient-to-r hover:from-yellow-400/20 hover:to-yellow-300/20 hover:translate-x-2 transition-all duration-300 group relative overflow-hidden"
+            replace
+            onClick={() => {
+              setTimeout(() => window.scrollTo(0, 0), 0);
+              setIsOpen(false);
+            }}
+            style={{
+              animationDelay: isOpen ? `${sections.length * 100}ms` : "0ms",
+              transform: isOpen ? "translateX(0)" : "translateX(-20px)",
+              opacity: isOpen ? 1 : 0,
+              transition: `all 0.4s ease-out ${sections.length * 50}ms`,
+            }}
+          >
+            {/* Efecto de brillo en hover */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            
+            <div className="relative flex items-center justify-between">
+              <span className="relative z-10">Baterias</span>
+              <svg 
+                className="w-5 h-5 text-white/50 group-hover:text-yellow-300 group-hover:translate-x-1 transition-all duration-300"
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </div>
+          </Link>
         </div>
       </div>
 
-      {/* Mobile Overlay */}
+      {/* Mobile Overlay mejorado */}
       {isOpen && (
         <div
-          className="md:hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-[-1]"
+          className="md:hidden fixed inset-0 bg-blue-800/10 backdrop-blur-sm z-[-1] transition-all duration-300"
           onClick={() => setIsOpen(false)}
         />
       )}

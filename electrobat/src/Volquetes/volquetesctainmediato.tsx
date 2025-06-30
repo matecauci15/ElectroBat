@@ -144,7 +144,7 @@ const VolquetesCTASection = () => {
     <div className="relative min-h-screen overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900 via-gray-900 to-black opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-600 opacity-90"></div>
         {/* Animated background elements - only for desktop */}
         <div className="hidden lg:block absolute top-20 left-10 w-32 h-32 bg-yellow-400/10 rounded-full blur-xl animate-pulse"></div>
         <div className="hidden lg:block absolute bottom-20 right-10 w-24 h-24 bg-blue-400/10 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -184,7 +184,7 @@ const VolquetesCTASection = () => {
               </div>
 
               <p className="text-lg text-gray-300 text-center font-light">
-                Coordiná fácil y rápido por llamada o WhatsApp
+                Volquetes habilitados y asegurados
               </p>
 
               {/* Action buttons - Mobile */}
@@ -233,12 +233,6 @@ const VolquetesCTASection = () => {
                 </button>
               </div>
 
-              <div className="text-center mb-4">
-                <p className="text-gray-300 text-base font-medium">
-                  Coordinamos la entrega y retiro del volquete cuando vos quieras.
-                </p>
-              </div>
-
               <div className="bg-gray-700/50 rounded-lg p-4 border border-gray-600/50">
                 <div className="flex items-center justify-center mb-3">
                   <Clock className="text-[#e7d21e] mr-2 w-4 h-4" />
@@ -246,7 +240,7 @@ const VolquetesCTASection = () => {
                 </div>
                 <div className="text-center text-sm text-gray-300 space-y-1">
                   <p><strong>Lunes a Viernes:</strong> 8:00–13:00 / 14:30–18:30</p>
-                  <p><strong>Sábados:</strong> 9:00–13:00</p>
+                  <p><strong>Sábados:</strong> 8:30–13:00</p>
                 </div>
               </div>
             </div>

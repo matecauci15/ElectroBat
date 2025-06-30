@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import empresa from '../assets/imgs/electrobat.webp';
-import { Wrench, Award, Users, TrendingUp, Zap, Settings, Car, MapPin, Battery, Clock } from 'lucide-react';
+import { Award, Users, TrendingUp } from 'lucide-react';
 
 export const AboutSectionvolquetes: React.FC = () => {
 
@@ -147,7 +147,7 @@ export const AboutSectionvolquetes: React.FC = () => {
         </div>
         
         {/* NUEVA SECCIÓN: ¿POR QUÉ ELEGIRNOS? - EMPIEZA AQUÍ */}
-<motion.div
+{/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -276,7 +276,7 @@ export const AboutSectionvolquetes: React.FC = () => {
               <span className="font-medium">Sábados:</span> 9:00 - 13:00
             </p>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
         
       </div>
     </section>

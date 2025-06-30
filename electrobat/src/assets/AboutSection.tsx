@@ -18,7 +18,7 @@ export const AboutSection: React.FC = () => {
           <h2 className="text-3xl font-extrabold text-[#04348c] sm:text-4xl">
             NOSOTROS
           </h2>
-          <div className="h-1 w-39 bg-[#e7d21e] mx-auto mt-4"></div>
+          <div className="h-1 md:w-44 w-36 rounded-xl bg-[#e7d21e] mx-auto mt-4"></div>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -28,7 +28,7 @@ export const AboutSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-[#04348c]/90 mb-4">20 Años de Experiencia</h3>
+            <h3 className="text-2xl font-bold text-[#04348c]/90 mb-4">30 Años de Experiencia</h3>
             <p className="text-gray-600 mb-6">
               Somos una empresa dedicada al abastecimiento, prestación de servicios y ventas de baterías con 20 años de trayectoria en el rubro. Apuntamos a dar respuestas, de acuerdo a las necesidades para cada exigencia concreta, colocando recursos frente a cada requerimiento.
             </p>
@@ -42,7 +42,7 @@ export const AboutSection: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </span>
-                <span className="text-gray-700">Servicio 24/7</span>
+                <span className="text-gray-700">Servicio rápido</span>
               </div>
               <div className="flex items-center">
                 <span className="bg-[#e7d21e] rounded-full p-2 mr-3">
@@ -50,7 +50,7 @@ export const AboutSection: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </span>
-                <span className="text-gray-700">Garantía Extendida</span>
+                <span className="text-gray-700">Capacitación a empresas</span>
               </div>
               <div className="flex items-center">
                 <span className="bg-[#e7d21e] rounded-full p-2 mr-3">
@@ -77,12 +77,9 @@ export const AboutSection: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
             <div className="absolute bottom-0 left-0 p-6">
-              <div className="bg-[#e7d21e] inline-block px-4 py-2 rounded-lg text-blue-800 font-bold mb-2">
-                ElectroBat
-              </div>
-              <p className="text-white text-lg">
+              {/* <p className="text-white text-lg">
                 Profesionales con pasión por la excelencia
-              </p>
+              </p> */}
             </div>
           </motion.div>
         </div>
@@ -112,7 +109,7 @@ export const AboutSection: React.FC = () => {
             <div className="inline-flex items-center justify-center w-12 h-12 mb-4 bg-yellow-100 rounded-full">
               <Award className="h-6 w-6 text-[#e7d21e]" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900">25+</h3>
+            <h3 className="text-2xl font-bold text-gray-900">30+</h3>
             <p className="text-gray-600 mt-1">Años de Experiencia</p>
           </motion.div>
           
@@ -157,7 +154,7 @@ export const AboutSection: React.FC = () => {
             <h3 className="text-3xl font-extrabold text-[#04348c] sm:text-4xl">
               ¿POR QUÉ ELEGIRNOS?
             </h3>
-            <div className="h-1 md:w-100 w-84 bg-[#e7d21e] mx-auto mt-4"></div>
+            <div className="h-1 md:w-100 w-80 rounded-xl bg-[#e7d21e] mx-auto mt-4"></div>
             <p className="text-md md:text-xl text-[#04348c]/80 mt-4 max-w-3xl mx-auto">
               Más que un cambio de batería: una solución completa.
             </p>
@@ -193,7 +190,7 @@ export const AboutSection: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900">Revisión preventiva</h4>
               </div>
-              <p className="text-gray-600">Al año sin costo adicional</p>
+              <p className="text-gray-600">Cada seis meses</p>
             </motion.div>
             
             <motion.div
@@ -209,7 +206,7 @@ export const AboutSection: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900">Servicio a domicilio</h4>
               </div>
-              <p className="text-gray-600">En Rosario centro</p>
+              <p className="text-gray-600">En la ciudad de Rosario</p>
             </motion.div>
             
             <motion.div
@@ -225,7 +222,7 @@ export const AboutSection: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900">Instalación profesional</h4>
               </div>
-              <p className="text-gray-600">En el acto</p>
+              <p className="text-gray-600">Con personal capacitado</p>
             </motion.div>
             
             <motion.div
@@ -239,7 +236,7 @@ export const AboutSection: React.FC = () => {
                 <div className="bg-[#e7d21e]/30 rounded-full p-2 mr-3">
                   <Battery className="h-5 w-5 text-[#e7d21e]" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900">Baterías Moura y Electrobat</h4>
+                <h4 className="text-lg font-semibold text-gray-900">Baterías de alta calidad</h4>
               </div>
               <p className="text-gray-600">Para todo tipo de vehículos</p>
             </motion.div>
@@ -257,7 +254,7 @@ export const AboutSection: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900">Ubicación estratégica</h4>
               </div>
-              <p className="text-gray-600">En la ciudad</p>
+              <p className="text-gray-600">Centro geográfico de la ciudad</p>
             </motion.div>
           </div>
           
@@ -278,7 +275,7 @@ export const AboutSection: React.FC = () => {
               <span className="font-medium">Lunes a Viernes:</span> 8:00 - 13:00 / 14:30 - 18:30
             </p>
             <p className="text-gray-700">
-              <span className="font-medium">Sábados:</span> 9:00 - 13:00
+              <span className="font-medium">Sábados:</span> 8:30 - 13:00
             </p>
           </motion.div>
         </motion.div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { AlertTriangle, Battery, Clock, Wrench } from "lucide-react";
+import { AlertTriangle, Battery, Clock } from "lucide-react";
 
 export const BatteryReplacementSection = () => {
   const [batteryLevel, setBatteryLevel] = useState(60);
@@ -27,11 +27,11 @@ export const BatteryReplacementSection = () => {
       title: "Luces débiles",
       description: "Iluminación deficiente",
     },
-    {
-      icon: Wrench,
-      title: "Sonidos extraños",
-      description: "Ruidos al arrancar",
-    },
+    // {
+    //   icon: Wrench,
+    //   title: "Sonidos extraños",
+    //   description: "Ruidos al arrancar",
+    // },
   ];
 
   return (
@@ -71,7 +71,7 @@ export const BatteryReplacementSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {/* Señales de Alerta */}
           {warningSignals.map((signal, index) => (
             <motion.div
@@ -111,46 +111,6 @@ export const BatteryReplacementSection = () => {
             <span className="font-semibold text-[#04348c]">más de 1 año</span>,
             es momento de hacer una revisión preventiva.
           </p>
-        </motion.div>
-
-        {/* Servicio Electrobat */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="bg-white border-2 border-[#e7d21e] rounded-lg p-6 text-center"
-        >
-          <h3 className="md:text-lg font-bold text-[#04348c] mb-2 text-md">
-            En Electrobat te revisamos la batería al momento del cambio y
-            además:
-          </h3>
-
-          <div className="flex items-center justify-center md:text-md text-md  text-gray-700 mb-2">
-            {/* <span className="mr-2">🔧</span> */}
-            <span>
-              <strong>
-                Revisión gratuita al año para asegurarte que tu vehículo sigue
-                cargando correctamente
-              </strong>
-            </span>
-          </div>
-
-<a
-  href="https://wa.me/5493416868049?text=Hola%20Electrobat!%20Quiero%20consultar%20por%20la%20revisión%20de%20mi%20batería."
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <motion.button
-    id="whatsapp-consulta"
-
-    className="bg-[#e7d21e] text-[#04348c] font-semibold py-2 px-6 rounded-full hover:bg-[#e7d21e]/80 transition-colors duration-300 inline-flex items-center text-sm"
-    whileHover={{ scale: 1.02 }}
-    whileTap={{ scale: 0.98 }}
-  >
-    ¡Escribinos y evitá quedarte varado!
-  </motion.button>
-</a>
         </motion.div>
       </div>
     </section>
