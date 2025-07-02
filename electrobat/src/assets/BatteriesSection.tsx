@@ -441,7 +441,9 @@ import B12V180AH from './imgs/B12V180AH.webp';
 
 // Company logos imports - you'll need to add these images to your project
 import LogoTrojan from './imgs/trojan.jpg';
-import LogoProbattery from './imgs/probattery.webp';
+// import LogoProbattery from './imgs/probattery.webp';
+import Prob from './imgs/prob.png';
+// import Prob from './imgs/prob.jpeg';
 import LogoMoura from './imgs/moura.webp';
 import LogoElectrobat from './imgs/electrobat.png';
 import LogoYuasa from './imgs/yuasa.webp';
@@ -489,7 +491,7 @@ export const BatteriesSection: React.FC = () => {
     {
       id: 2,
       name: "Probattery",
-      image: LogoProbattery,
+      image: Prob,
       alt: "Logo de Probattery",
       width: 1,
       height: 1
