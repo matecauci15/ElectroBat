@@ -9,19 +9,21 @@ import Whatsappbutton from '../Components/whappbutton';
 import { Navbarvolquetes } from '../Volquetes/Navbarvolquetes';
 import { Comofunciona } from '../Volquetes/comofunciona';
 import CTAInmediataSectionvolquetes from '../Volquetes/ctainmediatovolquetes';
-import VolquetesCTASection from '../Volquetes/volquetesctainmediato';
+// import VolquetesCTASection from '../Volquetes/volquetesctainmediato';
 import { AboutSectionvolquetes } from '../Volquetes/Aboutsectionvolquetes';
 import { Cuandonecesitas } from '../Volquetes/cuandonecesitas';
 // import { CTAFinalSimplevolquetes } from '../Volquetes/CTAfinalvolquetes';
 import { VolquetesSection } from '../Volquetes/Volquetes';
+import { BannerVolquetes } from '../Volquetes/bannervolquetes';
 
 export default function VolquetesLanding() {
   return (
     <>
       <Navbarvolquetes />
       <main>
+
         <section id="features">
-          <VolquetesCTASection />
+          <BannerVolquetes />
         </section>
         <section id="comofunciona">
         <Comofunciona />

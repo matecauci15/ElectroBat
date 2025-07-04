@@ -265,9 +265,9 @@ export const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const sections = React.useMemo(() => [
-    { id: "features", label: "Inicio" },
+    { id: "home", label: "Inicio" },
     { id: "about", label: "Nosotros" },
-    { id: "contacto", label: "Contacto" },
+    { id: "batteries", label: "Baterias" },
     // { id: "trucks", label: "Volquetes" },
   ], []);
 

@@ -81,6 +81,7 @@ import { TestimonialsSection } from './assets/TestimonialsSection';
 import { Footer } from './assets/Footer';
 import TagManager from 'react-gtm-module';
 import VolquetesLanding from './pages/volqueteslanding'; 
+// import { ServiceBanner } from './assets/serviceBanner';
 
 const tagManagerArgs = {
   gtmId: 'GTM-ND3HX2DW'
@@ -93,6 +94,9 @@ function LandingPrincipal() {
     <>
       <Navbar />
       <main>
+        {/* <section>
+          <ServiceBanner />
+        </section> */}
         <section id="features">
           <Banner />
           <CTAInmediataSection />
