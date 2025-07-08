@@ -213,6 +213,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { FaBolt, FaCar } from "react-icons/fa";
 import { MapPin, MapPinned, Phone } from "lucide-react";
 import volquete from './imgs/volquete.webp';
@@ -221,6 +222,8 @@ import mecanico from './imgs/mecanico.jpg';
 // Placeholder images - replace with your actual images
 
 export const Banner: React.FC = () => {
+    const navigate = useNavigate();
+    
     // Function to handle smooth scrolling
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
@@ -254,6 +257,10 @@ export const Banner: React.FC = () => {
 
     const handleMapsClick = () => {
         window.open('https://maps.google.com/?q=Rosario+ElectroBat', '_blank');
+    };
+
+    const handleVolquetesClick = () => {
+        navigate('/ElectroBat/volquetes');
     };
 
     return (
@@ -338,9 +345,7 @@ export const Banner: React.FC = () => {
                     Alquiler para obras, mudanzas y limpieza
                   </p>
                   <button
-                  onClick={() => {
-  window.location.href = '/ElectroBat/volquetes';
-}}
+                    onClick={handleVolquetesClick}
                     className="w-full py-2 md:py-3 px-2 md:px-4 bg-[#efd816] text-white font-semibold rounded md:rounded-lg hover:bg-yellow-200 transition-all duration-300 text-xs md:text-base"
                   >
                     VER VOLQUETES

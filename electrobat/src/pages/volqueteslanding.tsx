@@ -21,7 +21,9 @@ export default function VolquetesLanding() {
     <>
       <Navbarvolquetes />
       <main>
-
+        {/* <section>
+          <VolquetesCTASection/>
+        </section> */}
         <section id="features">
           <BannerVolquetes />
         </section>
