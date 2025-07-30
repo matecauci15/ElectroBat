@@ -228,7 +228,7 @@
 
 
 import { useState, useEffect, useRef } from "react";
-import { Phone, AlertTriangle, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 
 interface VisibleElements {
   header?: boolean;
@@ -328,16 +328,16 @@ export const Comofunciona = () => {
             </h2>
             
             <div className="max-w-2xl mx-auto">
-              <p className="text-md md:text-xl text-[#04348c]/80 mb-3 font-semibold">
+              <p className="text-xl md:text-xl text-[#04348c]/80 mb-3 font-semibold">
                 Necesitás un volquete en tu domicilio, edificio o terreno.
               </p>
               <p className="text-lg text-gray-600 mb-4">
                 Te lo resolvemos en 3 pasos simples.
               </p>
-              <div className="inline-flex items-center bg-[#e7d21e] text-[#04348c] px-6 py-2.5 rounded-full text-md shadow-md uppercase font-extrabold">
+              {/* <div className="inline-flex items-center bg-[#e7d21e] text-[#04348c] px-6 py-2.5 rounded-full text-md shadow-md uppercase font-extrabold">
                 <AlertTriangle className="w-4 h-4 mr-2" />
                 Servicio rápido y confiable
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -363,14 +363,14 @@ export const Comofunciona = () => {
                     <h3 className="text-xl font-bold text-[#04348c] mb-3">
                       Nos llamás o escribís
                     </h3>
-                    <p className="text-gray-600 mb-6 text-md flex-1">
+                    <p className="text-gray-600 mb-6 text-lg flex-1">
                       Contactanos por teléfono o WhatsApp para coordinar
                     </p>
                     <div className="flex space-x-2 mt-auto">
                       <button
                         id="cta-volquetes-phone-step1"
                         onClick={handlePhoneClick}
-                        className="cursor-pointer flex-1 flex items-center justify-center px-2 md:px-3 py-2 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-all duration-300 shadow-md text-xs md:text-sm"
+                        className="cursor-pointer flex-1 flex items-center justify-center px-2 md:px-3 py-2 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-all duration-300 shadow-md text-sm md:text-sm"
                       >
                         <Phone className="mr-1 w-3 h-3 md:w-4 md:h-4 text-[#e7d21e]" />
                         LLAMAR
@@ -378,7 +378,7 @@ export const Comofunciona = () => {
                       <button
                         id="cta-volquetes-whatsapp-step1"
                         onClick={handleWhatsAppClick}
-                        className="cursor-pointer flex-1 flex items-center justify-center px-2 md:px-3 py-2 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-all duration-300 shadow-md text-xs md:text-sm"
+                        className="cursor-pointer flex-1 flex items-center justify-center px-2 md:px-3 py-2 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-all duration-300 shadow-md text-sm md:text-sm"
                       >
                         <svg
                           className="mr-1 md:mr-2 w-3 h-3 md:w-4 md:h-4 text-[#e7d21e] group-hover:text-[#04348c] transition-colors"
@@ -417,7 +417,7 @@ export const Comofunciona = () => {
                     <h3 className="text-xl font-bold text-[#04348c] mb-3">
                       Lo llevamos a tu ubicación
                     </h3>
-                    <p className="text-gray-600 mb-4 text-md flex-1">
+                    <p className="text-gray-600 mb-4 text-lg flex-1">
                       Transportamos el volquete hasta donde lo necesités
                     </p>
                   </div>
@@ -447,7 +447,7 @@ export const Comofunciona = () => {
                     <h3 className="text-xl font-bold text-[#04348c] mb-3">
                       Lo retiramos cuando lo pedís
                     </h3>
-                    <p className="text-gray-600 text-md flex-1">
+                    <p className="text-gray-600 text-lg flex-1">
                       Una vez que hayas terminado, lo retiramos de tu ubicación
                     </p>
                   </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import empresa from '../assets/imgs/electrobat.webp';
 import { Award, Users, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const AboutSectionvolquetes: React.FC = () => {
 
@@ -20,7 +21,7 @@ export const AboutSectionvolquetes: React.FC = () => {
           </h2>
           <div className="h-1 w-40 bg-[#e7d21e] rounded-full mx-auto mt-4"></div>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -28,66 +29,104 @@ export const AboutSectionvolquetes: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-[#04348c]/90 mb-4">20 Años de Experiencia</h3>
-            <p className="text-gray-600 mb-6">
-              Somos una empresa dedicada al abastecimiento, prestación de servicios y ventas de baterías con 20 años de trayectoria en el rubro. Apuntamos a dar respuestas, de acuerdo a las necesidades para cada exigencia concreta, colocando recursos frente a cada requerimiento.
+            <h3 className="text-2xl font-bold text-[#04348c]/90 mb-4">
+              30 Años de Experiencia
+            </h3>
+            <p className="text-gray-600 mb-6 text-lg">
+              Somos una empresa dedicada al abastecimiento, prestación de
+              servicios y ventas de baterías con 30 años de trayectoria en el
+              rubro. Apuntamos a dar respuestas, de acuerdo a las necesidades
+              para cada exigencia concreta, colocando recursos frente a cada
+              requerimiento.
             </p>
-            <p className="text-gray-600 mb-6">
-              La empresa está integrada por personas con trayectoria, idoneidad y experiencia, sumada a una permanente capacitación que afianza sus niveles de liderazgo y competitividad.
+            <p className="text-gray-600 mb-6 text-lg">
+              La empresa está integrada por personas con trayectoria, idoneidad
+              y experiencia, sumada a una permanente capacitación que afianza
+              sus niveles de liderazgo y competitividad.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center">
                 <span className="bg-[#e7d21e] rounded-full p-2 mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-gray-900"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 </span>
                 <span className="text-gray-700">Servicio 24/7</span>
               </div>
               <div className="flex items-center">
                 <span className="bg-[#e7d21e] rounded-full p-2 mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-gray-900"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 </span>
                 <span className="text-gray-700">Garantía Extendida</span>
               </div>
               <div className="flex items-center">
                 <span className="bg-[#e7d21e] rounded-full p-2 mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-gray-900"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 </span>
                 <span className="text-gray-700">Asesoría Especializada</span>
               </div>
             </div>
           </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-              className="relative h-80 md:h-96 rounded-lg shadow-xl group overflow-hidden"
-
+          <Link
+            to="https://maps.google.com/?q=Rosario+ElectroBat"
+            target="_blank"
+            className="group relative block"
+            rel="noopener noreferrer"
+            // onClick={handleMapsClick}
           >
-            <img 
-              src={empresa} 
-              alt="Equipo de trabajo" 
-              className="w-full h-full object-cover "
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
-            <div className="absolute bottom-0 left-0 p-6">
-              <div className="bg-[#e7d21e] inline-block px-4 py-2 rounded-lg text-blue-800 font-bold mb-2">
-                ElectroBat
-              </div>
-              <p className="text-white text-lg">
-                Profesionales con pasión por la excelencia
-              </p>
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative h-80 md:h-96 rounded-lg shadow-xl group overflow-hidden"
+            >
+              <img
+                src={empresa}
+                alt="Equipo de trabajo"
+                className="w-full h-full object-cover "
+              />
+            </motion.div>
+          </Link>
         </div>
-        
+
         <div className="mt-16 grid grid-cols-3 md:grid-cols-3 md:gap-8 gap-2 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,7 +141,7 @@ export const AboutSectionvolquetes: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-900">500+</h3>
             <p className="text-gray-600 mt-1">Clientes Satisfechos</p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,7 +155,7 @@ export const AboutSectionvolquetes: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-900">25+</h3>
             <p className="text-gray-600 mt-1">Años de Experiencia</p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -130,7 +169,7 @@ export const AboutSectionvolquetes: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-900">1000+</h3>
             <p className="text-gray-600 mt-1">Baterias Entregadas</p>
           </motion.div>
-          
+
           {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -145,9 +184,9 @@ export const AboutSectionvolquetes: React.FC = () => {
             <p className="text-gray-600 mt-1">Soporte Técnico</p>
           </motion.div> */}
         </div>
-        
+
         {/* NUEVA SECCIÓN: ¿POR QUÉ ELEGIRNOS? - EMPIEZA AQUÍ */}
-{/* <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -277,7 +316,6 @@ export const AboutSectionvolquetes: React.FC = () => {
             </p>
           </motion.div>
         </motion.div> */}
-        
       </div>
     </section>
   );

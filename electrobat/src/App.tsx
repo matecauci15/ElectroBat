@@ -102,6 +102,9 @@ function LandingPrincipal() {
           <CTAInmediataSection />
           <DomicilioSections />
         </section>
+        <section id="testimonials">
+          <TestimonialsSection />
+        </section>
         <section id="about">
           <AboutSection />
         </section>
@@ -110,9 +113,6 @@ function LandingPrincipal() {
         </section>
         <section id="batteries">
           <BatteriesSection />
-        </section>
-        <section id="testimonials">
-          <TestimonialsSection />
         </section>
         {/* <section id="contacto">
           <ContactSection />

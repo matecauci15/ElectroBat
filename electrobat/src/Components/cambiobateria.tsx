@@ -66,12 +66,12 @@ export const BatteryReplacementSection = () => {
           <h2 className="text-2xl font-bold text-[#04348c] sm:text-3xl mb-3">
             ¿Cuándo cambiar tu batería?
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
+          <p className="text-gray-600 max-w-xl mx-auto text-lg">
             Detecta a tiempo las señales de una batería que necesita reemplazo
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 ">
           {/* Señales de Alerta */}
           {warningSignals.map((signal, index) => (
             <motion.div
@@ -86,15 +86,14 @@ export const BatteryReplacementSection = () => {
               <div className=" rounded-full  flex items-center justify-center mx-auto mb-2">
                 <signal.icon className="h-8 w-8 text-[#04348c]" />
               </div>
-              <h3 className="text-lg font-semibold text-[#04348c]/80 mb-2">
+              <h3 className="text-xl font-semibold text-[#04348c]/80 mb-2">
                 {signal.title}
               </h3>
-              <p className="text-gray-600 text-sm">{signal.description}</p>
+              <p className="text-gray-600 text-md">{signal.description}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Mensaje Principal */}
         {/* Mensaje Principal */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -106,7 +105,7 @@ export const BatteryReplacementSection = () => {
           <div className=" rounded-full mb-2">
             <AlertTriangle size={40} className=" text-[#e7d21e]" />
           </div>
-          <p className="text-gray-700 text-base sm:text-lg">
+          <p className="text-gray-700 text-lg sm:text-lg">
             Si tu batería tiene{" "}
             <span className="font-semibold text-[#04348c]">más de 1 año</span>,
             es momento de hacer una revisión preventiva.

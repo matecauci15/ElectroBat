@@ -36,14 +36,14 @@ export default function VolquetesLanding() {
         <section id="cuandonecesitas">
         <Cuandonecesitas />
         </section>
+        <section id="testimonials">
+          <TestimonialsSection />
+        </section>
         <section id="about">
           <AboutSectionvolquetes />
         </section>
         <section id="volquetes">
         <VolquetesSection />
-        </section>
-        <section id="testimonials">
-          <TestimonialsSection />
         </section>
         {/* <section id="contacto">
           <ContactSection />

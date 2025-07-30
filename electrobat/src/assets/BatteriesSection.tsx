@@ -889,7 +889,7 @@ export const BatteriesSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-8 md:p-12">
               <h3 className="text-2xl font-bold text-[#04348c]/90 mb-4">Servicio de Diagnóstico</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 text-lg">
                 ¿Problemas con tu batería? Ofrecemos diagnóstico profesional y recomendaciones para extender la vida útil de tu batería.
               </p>
               <ul className="mb-8 space-y-3">
