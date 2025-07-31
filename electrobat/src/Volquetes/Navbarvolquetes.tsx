@@ -249,10 +249,7 @@
 // };
 
 // export default Navbarvolquetes;
-
-import React, { useState, useEffect } from "react";
-// import ElectroBat from "./imgs/electrobat.png";
-// import logo from "./imgs/logo.png";
+  import React, { useState, useEffect } from "react";
 import logo from "../assets/imgs/logo.png";
 import { Link } from "react-router-dom";
 
@@ -260,38 +257,19 @@ export const Navbarvolquetes = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [scrolled, setScrolled] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   const sections = React.useMemo(() => [
     { id: "features", label: "Inicio" },
     { id: "about", label: "Nosotros" },
-    { id: "contacto", label: "Contacto" },
-    // { id: "trucks", label: "Volquetes" },
+    { id: "volquetes", label: "Volquetes" },
   ], []);
 
-  
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
       // Control del fondo transparente/sólido
       setScrolled(currentScrollY > 20);
-      
-      // Control de visibilidad del navbar - Más responsivo
-      if (currentScrollY <= 10) {
-        // Siempre visible en la parte superior
-        setVisible(true);
-      } else if (currentScrollY < lastScrollY) {
-        // Scroll hacia arriba - mostrar navbar INMEDIATAMENTE
-        setVisible(true);
-      } else if (currentScrollY > lastScrollY) {
-        // Scroll hacia abajo - ocultar navbar INMEDIATAMENTE
-        setVisible(false);
-        setIsOpen(false); // Cerrar menú mobile si está abierto
-      }
-      
-      setLastScrollY(currentScrollY);
       
       // Detección de sección activa
       const scrollWithOffset = currentScrollY + 200;
@@ -311,7 +289,7 @@ export const Navbarvolquetes = () => {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [sections, lastScrollY]);
+  }, [sections]);
 
   const handleClick = (id: string) => {
     const element = document.getElementById(id);
@@ -359,8 +337,6 @@ export const Navbarvolquetes = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 w-full text-white z-50 transition-all duration-300 ease-out ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      } ${
         scrolled || isOpen
           ? "bg-gradient-to-br from-blue-500 via-blue-700 to-blue-950 backdrop-blur-md shadow-xl"
           : "bg-transparent backdrop-blur-none shadow-none border-b border-transparent"
@@ -387,7 +363,7 @@ export const Navbarvolquetes = () => {
           <div className="cursor-pointer hidden md:flex items-center space-x-2 lg:space-x-6">
             {sections.map((section) => (
               <button
-                key={section.id}
+                key={`${section.id}-${section.label}`}
                 onClick={() => handleClick(section.id)}
                 className={`cursor-pointer px-4 py-2 rounded-lg transition-all duration-200 text-sm lg:text-base font-medium ${
                   activeSection === section.id
@@ -407,13 +383,7 @@ export const Navbarvolquetes = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div
-            className={`cursor-pointer md:hidden z-10 transition-all duration-300 ${
-              lastScrollY <= 10 || (lastScrollY > 10 && visible)
-                ? "opacity-100 visible"
-                : "opacity-0 invisible"
-            }`}
-          >
+          <div className="cursor-pointer md:hidden z-10 transition-all duration-300">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`cursor-pointer p-2 rounded-lg transition-all duration-300 ${
@@ -465,7 +435,7 @@ export const Navbarvolquetes = () => {
         <div className="px-4 py-6 space-y-1">
           {sections.map((section, index) => (
             <button
-              key={section.id}
+              key={`${section.id}-${section.label}-mobile`}
               onClick={() => handleClick(section.id)}
               className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 font-medium text-base group relative overflow-hidden ${
                 activeSection === section.id
@@ -500,7 +470,7 @@ export const Navbarvolquetes = () => {
             </button>
           ))}
           
-          {/* Volquetes Link */}
+          {/* Baterias Link */}
           <Link
             to="/ElectroBat/"
             className="block w-full text-left px-6 py-4 rounded-xl text-base font-medium text-white/90 hover:text-white hover:bg-gradient-to-r hover:from-yellow-400/20 hover:to-yellow-300/20 hover:translate-x-2 transition-all duration-300 group relative overflow-hidden"

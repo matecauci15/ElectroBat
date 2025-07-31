@@ -253,7 +253,6 @@
 // export default Navbar;
 
 import React, { useState, useEffect } from "react";
-// import ElectroBat from "./imgs/electrobat.png";
 import logo from "./imgs/logo.png";
 import { Link } from "react-router-dom";
 
@@ -261,38 +260,19 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [scrolled, setScrolled] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   const sections = React.useMemo(() => [
     { id: "home", label: "Inicio" },
     { id: "about", label: "Nosotros" },
     { id: "batteries", label: "Baterias" },
-    // { id: "trucks", label: "Volquetes" },
   ], []);
 
-  
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
       // Control del fondo transparente/sólido
       setScrolled(currentScrollY > 20);
-      
-      // Control de visibilidad del navbar - Más responsivo
-      if (currentScrollY <= 10) {
-        // Siempre visible en la parte superior
-        setVisible(true);
-      } else if (currentScrollY < lastScrollY) {
-        // Scroll hacia arriba - mostrar navbar INMEDIATAMENTE
-        setVisible(true);
-      } else if (currentScrollY > lastScrollY) {
-        // Scroll hacia abajo - ocultar navbar INMEDIATAMENTE
-        setVisible(false);
-        setIsOpen(false); // Cerrar menú mobile si está abierto
-      }
-      
-      setLastScrollY(currentScrollY);
       
       // Detección de sección activa
       const scrollWithOffset = currentScrollY + 200;
@@ -312,7 +292,7 @@ export const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [sections, lastScrollY]);
+  }, [sections]);
 
   const handleClick = (id: string) => {
     const element = document.getElementById(id);
@@ -332,8 +312,8 @@ export const Navbar = () => {
       top: 0,
       behavior: "smooth"
     });
-    setActiveSection("features");
-    window.history.pushState(null, "", "#features");
+    setActiveSection("home");
+    window.history.pushState(null, "", "#home");
     setIsOpen(false);
   };
 
@@ -360,8 +340,6 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 w-full text-white z-50 transition-all duration-300 ease-out ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      } ${
         scrolled || isOpen
           ? "bg-gradient-to-br from-blue-500 via-blue-700 to-blue-950 backdrop-blur-md shadow-xl"
           : "bg-transparent backdrop-blur-none shadow-none border-b border-transparent"
@@ -408,13 +386,7 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div
-            className={`cursor-pointer md:hidden z-10 transition-all duration-300 ${
-              lastScrollY <= 10 || (lastScrollY > 10 && visible)
-                ? "opacity-100 visible"
-                : "opacity-0 invisible"
-            }`}
-          >
+          <div className="cursor-pointer md:hidden z-10 transition-all duration-300">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`cursor-pointer p-2 rounded-lg transition-all duration-300 ${

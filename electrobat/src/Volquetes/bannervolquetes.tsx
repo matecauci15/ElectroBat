@@ -1,20 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { Phone, MapPin, Clock } from "lucide-react";
-import volquete from '../assets/imgs/volquete.webp';
-import mecanico from '../assets/imgs/mecanico.jpg';
+// import volquete from '../assets/imgs/volquete.webp';
+// import mecanico from '../assets/imgs/mecanico.jpg';
 
 export const BannerVolquetes: React.FC = () => {
     // Function to handle smooth scrolling
-    const scrollToSectionButton = (sectionId: string) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-            });
-        }
-    };
+
 
     // CTA Functions
     const handlePhoneClick = () => {
@@ -48,89 +40,8 @@ export const BannerVolquetes: React.FC = () => {
           <div className="hidden lg:block absolute top-1/2 right-20 w-16 h-16 bg-green-400/10 rounded-full blur-xl animate-pulse delay-500"></div>
         </div>
 
-        {/* SERVICE BANNER SECTION - IMPROVED */}
-        <div className="relative z-0 py-4 md:py-12 mt-20">
-          <div className="max-w-4xl mx-auto px-4">
-            {/* Header */}
-            <div className="text-center mb-4 md:mb-8">
-              <h2 className="text-xl md:text-3xl font-bold text-white mb-1 md:mb-2 uppercase">
-                Elegí tu servicio
-              </h2>
-              {/* <p className="text-sm md:text-lg text-gray-300">Elegí tu servicio</p> */}
-            </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 max-w-sm md:max-w-3xl mx-auto">
-              {/* Baterías */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="group bg-gray-800/90 border border-gray-600/50 rounded-lg md:rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm"
-              >
-                {/* Image */}
-                <div className="aspect-[5/2] md:aspect-[3/2] overflow-hidden">
-                  <img
-                    src={mecanico}
-                    alt="Batería de auto"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="p-2 md:p-6 text-center">
-                  <h3 className="text-sm md:text-xl font-bold text-white mb-1 md:mb-2">
-                    BATERÍAS
-                  </h3>
-                  <p className="text-gray-300 text-xs md:text-sm mb-2 md:mb-4 hidden md:block">
-                    Cambio e instalación para todos los vehículos
-                  </p>
-                  <button
-                    onClick={() => {
-                      window.location.href = '/ElectroBat';
-                    }}
-                    className="w-full py-2 md:py-3 px-2 md:px-4 bg-blue-600 text-white font-semibold rounded md:rounded-lg hover:bg-blue-700 transition-all duration-300 text-xs md:text-base"
-                  >
-                    VER BATERÍAS
-                  </button>
-                </div>
-              </motion.div>
-
-              {/* Volquetes */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="group bg-gray-800/90 border border-gray-600/50 rounded-lg md:rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm"
-              >
-                {/* Image */}
-                <div className="aspect-[5/2] md:aspect-[3/2] overflow-hidden">
-                  <img
-                    src={volquete}
-                    alt="Volquete para obras"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="p-2 md:p-6 text-center">
-                  <h3 className="text-sm md:text-xl font-bold text-white mb-1 md:mb-2">
-                    VOLQUETES
-                  </h3>
-                  <p className="text-gray-300 text-xs md:text-sm mb-2 md:mb-4 hidden md:block">
-                    Alquiler para obras, mudanzas y limpieza
-                  </p>
-                  <button
-                    onClick={() => scrollToSectionButton("volquetes")}
-                    className="w-full py-2 md:py-3 px-2 md:px-4 bg-[#efd816] text-white font-semibold rounded md:rounded-lg hover:bg-yellow-200 transition-all duration-300 text-xs md:text-base"
-                  >
-                    VER VOLQUETES
-                  </button>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
+      
 
         {/* VOLQUETES CTA SECTION */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-8 min-h-screen flex items-center">
@@ -296,7 +207,7 @@ export const BannerVolquetes: React.FC = () => {
                     >
                       <div className="flex items-center space-x-3">
                        <svg
-                          className="mr-2 w-4 h-4 sm:w-5 sm:h-5 text-[#e7d21e] group-hover:text-[#04348c] transition-colors"
+                          className="mr-2 w-4 h-4 sm:w-5 sm:h-5 text-[#e7d21e] group-hover:text-white transition-colors group-hover:animate-bounce"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
