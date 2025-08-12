@@ -265,7 +265,7 @@ export const Navbar = () => {
 
           {/* Volquetes Link */}
           <Link
-            to="/ElectroBat/volquetes"
+            to="/volquetes"
             className="block w-full text-left px-6 py-4 rounded-xl text-base font-medium text-white/90 hover:text-white hover:bg-gradient-to-r hover:from-yellow-400/20 hover:to-yellow-300/20 hover:translate-x-2 transition-all duration-300 group relative overflow-hidden"
             replace
             onClick={() => {
