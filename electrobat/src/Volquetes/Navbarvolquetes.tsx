@@ -249,7 +249,8 @@
 // };
 
 // export default Navbarvolquetes;
-  import React, { useState, useEffect } from "react";
+
+import React, { useState, useEffect } from "react";
 import logo from "../assets/imgs/logo.png";
 import { Link } from "react-router-dom";
 
@@ -361,7 +362,7 @@ export const Navbarvolquetes = () => {
 
           {/* Desktop Menu */}
           <div className="cursor-pointer hidden md:flex items-center space-x-2 lg:space-x-6">
-            {sections.map((section) => (
+            {sections.slice(0, 2).map((section) => (
               <button
                 key={`${section.id}-${section.label}`}
                 onClick={() => handleClick(section.id)}
@@ -377,9 +378,22 @@ export const Navbarvolquetes = () => {
             <Link
               to="/ElectroBat"
               className="text-white px-4 py-2 rounded-lg text-sm lg:text-base font-medium hover:bg-yellow-300 hover:text-gray-900 transition-all duration-200"
+              onClick={() => {
+                setTimeout(() => window.scrollTo(0, 0), 100);
+              }}
             >
               Baterias
             </Link>
+            <button
+              onClick={() => handleClick("volquetes")}
+              className={`cursor-pointer px-4 py-2 rounded-lg transition-all duration-200 text-sm lg:text-base font-medium ${
+                activeSection === "volquetes"
+                  ? "bg-[#e7d21e] text-gray-900 shadow-md"
+                  : "hover:bg-white/10 hover:text-[#e7d21e] text-white/90 hover:scale-105"
+              }`}
+            >
+              Volquetes
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -433,7 +447,7 @@ export const Navbarvolquetes = () => {
         <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-4"></div>
         
         <div className="px-4 py-6 space-y-1">
-          {sections.map((section, index) => (
+          {sections.slice(0, 2).map((section, index) => (
             <button
               key={`${section.id}-${section.label}-mobile`}
               onClick={() => handleClick(section.id)}
@@ -476,14 +490,14 @@ export const Navbarvolquetes = () => {
             className="block w-full text-left px-6 py-4 rounded-xl text-base font-medium text-white/90 hover:text-white hover:bg-gradient-to-r hover:from-yellow-400/20 hover:to-yellow-300/20 hover:translate-x-2 transition-all duration-300 group relative overflow-hidden"
             replace
             onClick={() => {
-              setTimeout(() => window.scrollTo(0, 0), 0);
+              setTimeout(() => window.scrollTo(0, 0), 100);
               setIsOpen(false);
             }}
             style={{
-              animationDelay: isOpen ? `${sections.length * 100}ms` : "0ms",
+              animationDelay: isOpen ? `${2 * 100}ms` : "0ms",
               transform: isOpen ? "translateX(0)" : "translateX(-20px)",
               opacity: isOpen ? 1 : 0,
-              transition: `all 0.4s ease-out ${sections.length * 50}ms`,
+              transition: `all 0.4s ease-out ${2 * 50}ms`,
             }}
           >
             {/* Efecto de brillo en hover */}
@@ -501,6 +515,41 @@ export const Navbarvolquetes = () => {
               </svg>
             </div>
           </Link>
+
+          {/* Volquetes Button */}
+          <button
+            onClick={() => handleClick("volquetes")}
+            className={`block w-full text-left px-6 py-4 rounded-xl text-base font-medium transition-all duration-300 group relative overflow-hidden ${
+              activeSection === "volquetes"
+                ? "bg-gradient-to-r from-[#e7d21e] to-[#f4e051] text-gray-900 shadow-lg transform scale-[1.02]"
+                : "text-white/90 hover:text-white hover:bg-white/5 hover:translate-x-2"
+            }`}
+            style={{
+              animationDelay: isOpen ? `${3 * 100}ms` : "0ms",
+              transform: isOpen ? "translateX(0)" : "translateX(-20px)",
+              opacity: isOpen ? 1 : 0,
+              transition: `all 0.4s ease-out ${3 * 50}ms`,
+            }}
+          >
+            {/* Efecto de brillo en hover */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            
+            <div className="relative flex items-center justify-between">
+              <span className="relative z-10">Volquetes</span>
+              <svg 
+                className={`w-5 h-5 transition-all duration-300 ${
+                  activeSection === "volquetes" 
+                    ? "text-gray-700 rotate-0" 
+                    : "text-white/50 group-hover:text-[#e7d21e] group-hover:translate-x-1"
+                }`}
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
 

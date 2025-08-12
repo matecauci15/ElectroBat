@@ -252,6 +252,7 @@
 
 // export default Navbar;
 
+
 import React, { useState, useEffect } from "react";
 import logo from "./imgs/logo.png";
 import { Link } from "react-router-dom";
@@ -264,7 +265,6 @@ export const Navbar = () => {
   const sections = React.useMemo(() => [
     { id: "home", label: "Inicio" },
     { id: "about", label: "Nosotros" },
-    { id: "batteries", label: "Baterias" },
   ], []);
 
   useEffect(() => {
@@ -377,9 +377,18 @@ export const Navbar = () => {
                 {section.label}
               </button>
             ))}
+            <button
+              onClick={() => window.scrollTo({ top: document.getElementById("batteries")?.offsetTop || 0, behavior: "smooth" })}
+              className="text-white px-4 py-2 rounded-lg text-sm lg:text-base font-medium hover:bg-white/10 hover:text-[#e7d21e] hover:scale-105 transition-all duration-200"
+            >
+              Baterias
+            </button>
             <Link
               to="/ElectroBat/volquetes"
               className="text-white px-4 py-2 rounded-lg text-sm lg:text-base font-medium hover:bg-yellow-300 hover:text-gray-900 transition-all duration-200"
+              onClick={() => {
+                setTimeout(() => window.scrollTo(0, 0), 100);
+              }}
             >
               Volquetes
             </Link>
@@ -473,20 +482,56 @@ export const Navbar = () => {
             </button>
           ))}
           
+          {/* Baterias Button */}
+          <button
+            onClick={() => {
+              const batteriesElement = document.getElementById("batteries");
+              if (batteriesElement) {
+                window.scrollTo({ 
+                  top: batteriesElement.offsetTop - 70, 
+                  behavior: "smooth" 
+                });
+              }
+              setIsOpen(false);
+            }}
+            className="block w-full text-left px-6 py-4 rounded-xl text-base font-medium text-white/90 hover:text-white hover:bg-white/5 hover:translate-x-2 transition-all duration-300 group relative overflow-hidden"
+            style={{
+              animationDelay: isOpen ? `${2 * 100}ms` : "0ms",
+              transform: isOpen ? "translateX(0)" : "translateX(-20px)",
+              opacity: isOpen ? 1 : 0,
+              transition: `all 0.4s ease-out ${2 * 50}ms`,
+            }}
+          >
+            {/* Efecto de brillo en hover */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            
+            <div className="relative flex items-center justify-between">
+              <span className="relative z-10">Baterias</span>
+              <svg 
+                className="w-5 h-5 text-white/50 group-hover:text-[#e7d21e] group-hover:translate-x-1 transition-all duration-300"
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </button>
+
           {/* Volquetes Link */}
           <Link
             to="/ElectroBat/volquetes"
             className="block w-full text-left px-6 py-4 rounded-xl text-base font-medium text-white/90 hover:text-white hover:bg-gradient-to-r hover:from-yellow-400/20 hover:to-yellow-300/20 hover:translate-x-2 transition-all duration-300 group relative overflow-hidden"
             replace
             onClick={() => {
-              setTimeout(() => window.scrollTo(0, 0), 0);
+              setTimeout(() => window.scrollTo(0, 0), 100);
               setIsOpen(false);
             }}
             style={{
-              animationDelay: isOpen ? `${sections.length * 100}ms` : "0ms",
+              animationDelay: isOpen ? `${3 * 100}ms` : "0ms",
               transform: isOpen ? "translateX(0)" : "translateX(-20px)",
               opacity: isOpen ? 1 : 0,
-              transition: `all 0.4s ease-out ${sections.length * 50}ms`,
+              transition: `all 0.4s ease-out ${3 * 50}ms`,
             }}
           >
             {/* Efecto de brillo en hover */}

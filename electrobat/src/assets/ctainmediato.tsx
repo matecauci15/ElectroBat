@@ -59,7 +59,7 @@ const CTAInmediataSection = () => {
         </motion.div>
 
         {/* Botones CTA compactos */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
           
           {/* LLAMAR AHORA */}
           <motion.div

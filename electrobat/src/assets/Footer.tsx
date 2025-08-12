@@ -154,6 +154,9 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+                <div className="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
+        <p>© {new Date().getFullYear()} Desarrollado por GauchoLab.</p>
+        </div>
       </div>
     </footer>
   );
