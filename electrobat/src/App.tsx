@@ -1,70 +1,3 @@
-
-// import './index.css'; 
-// // import { VolquetesSection } from './assets/Volquetes'; 
-// // import { FeaturesSection } from './assets/FeaturesSection'; 
-// import { Whatsappbutton } from './Components/whappbutton';
-// import DomicilioSections from './assets/cambioadomicilio';
-// import CTAInmediataSection from './assets/ctainmediato';
-// import { BatteryReplacementSection } from './Components/cambiobateria';
-// import CTAFinalSimple from './Components/CTAfinal';
-// import Navbar from './assets/Navbar';
-// import { AboutSection } from './assets/Aboutsection';
-// import { Banner } from './assets/banner';
-// import { ContactSection } from './assets/Contactsection';
-// import { BatteriesSection } from './assets/Batteriessection';
-// import { TestimonialsSection } from './assets/TestimonialsSection';
-// import { Footer } from './assets/Footer';
-// import TagManager from 'react-gtm-module';
-
-// const tagManagerArgs = {
-//   gtmId: 'GTM-ND3HX2DW'
-// };
-
-
-
-// function App() {   
-//   return (     
-//     <div className="app overflow-hidden">
-//       <Navbar />
-      
-//       <main>
-//         <section id="features">
-//           <Banner />
-//           <DomicilioSections />
-//           <CTAInmediataSection/>
-//         </section>
-        
-//         <section id="about">
-//           <AboutSection />
-//         </section>
-        
-//         <section id='cambiobateria'>
-//         <BatteryReplacementSection />
-//         </section>
-//         <section id="batteries">
-//           <BatteriesSection />
-//         </section>
-        
-//         <section id="testimonials">
-//           <TestimonialsSection />
-//         </section>
-        
-//         <section id="contacto">
-//           <ContactSection />
-//         </section>
-//         <section>
-//         <CTAFinalSimple />
-//         </section>
-//       </main>
-//       <Whatsappbutton />
-//       <Footer />
-//     </div>
-//   ); 
-// }
-
-// export default App;
-// TagManager.initialize(tagManagerArgs);
-
 import './index.css';
 import { Routes, Route } from 'react-router-dom';
 import { Whatsappbutton } from './Components/whappbutton';
@@ -130,8 +63,8 @@ function LandingPrincipal() {
 function App() {
   return (
     <Routes> 
-      <Route path="/electrobat" element={<LandingPrincipal />} />
-      <Route path="/electrobat/volquetes" element={<VolquetesLanding />} />
+      <Route path="/" element={<LandingPrincipal />} />
+      <Route path="/volquetes" element={<VolquetesLanding />} />
     </Routes>
   );
 }
