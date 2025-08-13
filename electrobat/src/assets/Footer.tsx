@@ -124,6 +124,17 @@ export const Footer: React.FC = () => {
                   Av. Córdoba 4031, Rosario, Santa Fe, Argentina
                 </button>
               </li>
+              
+              <li className="flex items-center">
+                <FaPhone className="text-[#e7d21e] mr-3" />
+                <button
+                  onClick={handlePhoneCall}
+                  className="text-gray-400 hover:text-[#e7d21e] transition-colors cursor-pointer "
+                >
+                  +3416868049
+                </button>
+              </li>
+              
               <li className="flex items-center">
                 <FaPhone className="text-[#e7d21e] mr-3" />
                 <button
