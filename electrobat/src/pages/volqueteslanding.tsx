@@ -5,7 +5,7 @@ import { Footer } from '../assets/Footer';
 // import { ContactSection } from '../assets/Contactsection';
 // import CTAInmediataSection from '../assets/volquetesctainmediato';
 import { TestimonialsSection } from '../assets/TestimonialsSection';
-import Whatsappbutton from '../Components/whappbutton';
+import Whatsappbutton from '../Components/Whatsappbutton';
 import { Navbarvolquetes } from '../Volquetes/Navbarvolquetes';
 import { Comofunciona } from '../Volquetes/comofunciona';
 import CTAInmediataSectionvolquetes from '../Volquetes/ctainmediatovolquetes';

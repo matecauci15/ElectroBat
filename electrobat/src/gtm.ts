@@ -1,5 +1,5 @@
 export const initGTM = () => {
-  const GTM_ID = 'GTM-ND3HX2DW'
+  const GTM_ID = 'GTM-5B8CQNP'
 
   // Evitar cargar dos veces
   if (document.getElementById('gtm-script')) return

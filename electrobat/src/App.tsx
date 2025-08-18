@@ -1,6 +1,6 @@
 import './index.css';
 import { Routes, Route } from 'react-router-dom';
-import { Whatsappbutton } from './Components/whappbutton';
+import Whatsappbutton  from './Components/Whatsappbutton';
 import DomicilioSections from './assets/cambioadomicilio';
 import CTAInmediataSection from './assets/ctainmediato';
 import { BatteryReplacementSection } from './Components/cambiobateria';
