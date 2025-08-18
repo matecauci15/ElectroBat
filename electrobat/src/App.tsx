@@ -5,15 +5,20 @@ import DomicilioSections from './assets/cambioadomicilio';
 import CTAInmediataSection from './assets/ctainmediato';
 import { BatteryReplacementSection } from './Components/cambiobateria';
 // import CTAFinalSimple from './Components/CTAfinal';
-import Navbar from './assets/Navbar';
-import { AboutSection } from './assets/Aboutsection';
-import { Banner } from './assets/banner';
+// import Navbar from './assets/Navbar';
+// import { AboutSection } from './assets/Aboutsection';
+// import { Banner } from './assets/banner';
 // import { ContactSection } from './assets/Contactsection';
-import { BatteriesSection } from './assets/Batteriessection';
+// import { BatteriesSection } from './assets/Batteriessection';
 import { TestimonialsSection } from './assets/TestimonialsSection';
 import { Footer } from './assets/Footer';
 import TagManager from 'react-gtm-module';
 import VolquetesLanding from './pages/volqueteslanding'; 
+import Navbar from './assets/NavBar';
+import { AboutSection } from './assets/AboutSection';
+import { Banner } from './assets/Banner';
+import { BatteriesSection } from './assets/BatteriesSection';
+
 // import { ServiceBanner } from './assets/serviceBanner';
 
 const tagManagerArgs = {
