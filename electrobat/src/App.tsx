@@ -4,25 +4,17 @@ import Whatsappbutton  from './Components/Whatsappbutton';
 import DomicilioSections from './assets/cambioadomicilio';
 import CTAInmediataSection from './assets/ctainmediato';
 import { BatteryReplacementSection } from './Components/cambiobateria';
-// import CTAFinalSimple from './Components/CTAfinal';
-// import Navbar from './assets/Navbar';
-// import { AboutSection } from './assets/Aboutsection';
-// import { Banner } from './assets/banner';
-// import { ContactSection } from './assets/Contactsection';
-// import { BatteriesSection } from './assets/Batteriessection';
 import { TestimonialsSection } from './assets/TestimonialsSection';
 import { Footer } from './assets/Footer';
 import TagManager from 'react-gtm-module';
 import VolquetesLanding from './pages/volqueteslanding'; 
-import Navbar from './assets/NavBar';
-import { AboutSection } from './assets/AboutSection';
-import { Banner } from './assets/Banner';
-import { BatteriesSection } from './assets/BatteriesSection';
-
-// import { ServiceBanner } from './assets/serviceBanner';
+import Navbar from './assets/Navbar';
+import { AboutSection } from './assets/Aboutsection';
+import { Banner } from './assets/banner';
+import { BatteriesSection } from './assets/Batteriessection';
 
 const tagManagerArgs = {
-  gtmId: 'GTM-ND3HX2DW'
+  gtmId: 'GTM-5B8CQNP'
 };
 
 TagManager.initialize(tagManagerArgs);
@@ -32,9 +24,6 @@ function LandingPrincipal() {
     <>
       <Navbar />
       <main>
-        {/* <section>
-          <ServiceBanner />
-        </section> */}
         <section id="features">
           <Banner />
           <CTAInmediataSection />
@@ -52,12 +41,6 @@ function LandingPrincipal() {
         <section id="batteries">
           <BatteriesSection />
         </section>
-        {/* <section id="contacto">
-          <ContactSection />
-        </section> */}
-        {/* <section>
-          <CTAFinalSimple />
-        </section> */}
       </main>
       <Whatsappbutton />
       <Footer />
@@ -67,10 +50,12 @@ function LandingPrincipal() {
 
 function App() {
   return (
-    <Routes> 
-      <Route path="/" element={<LandingPrincipal />} />
-      <Route path="/volquetes" element={<VolquetesLanding />} />
-    </Routes>
+<Routes>
+  <Route path="/" element={<LandingPrincipal />} />
+  <Route path="/volquetes" element={<VolquetesLanding />} />
+  <Route path="*" element={<LandingPrincipal />} /> {/* Redirige todo lo demás a landing */}
+</Routes>
+
   );
 }
 

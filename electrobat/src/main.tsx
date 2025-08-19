@@ -21,12 +21,15 @@ import App from './App';
 import './index.css';
 import { initGTM } from './gtm';
 import { HashRouter } from 'react-router-dom';
+import { ScrollToTop } from './Components/ScrollToTop';
+
 
 initGTM(); // Carga GTM al arrancar la app
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HashRouter>
+      <ScrollToTop />
       <App />
     </HashRouter>
   </React.StrictMode>

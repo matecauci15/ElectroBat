@@ -14,7 +14,14 @@ import { AboutSectionvolquetes } from '../Volquetes/Aboutsectionvolquetes';
 import { Cuandonecesitas } from '../Volquetes/cuandonecesitas';
 // import { CTAFinalSimplevolquetes } from '../Volquetes/CTAfinalvolquetes';
 import { VolquetesSection } from '../Volquetes/Volquetes';
+import TagManager from 'react-gtm-module';
 import { BannerVolquetes } from '../Volquetes/bannervolquetes';
+
+const tagManagerArgs = {
+  gtmId: 'GTM-5B8CQNP'
+};
+
+TagManager.initialize(tagManagerArgs);
 
 export default function VolquetesLanding() {
   return (
