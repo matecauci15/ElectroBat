@@ -1,7 +1,6 @@
 import './index.css';
 import { Routes, Route } from 'react-router-dom';
 import Whatsappbutton  from './Components/Whatsappbutton';
-import DomicilioSections from './assets/Cambioadomicilio';
 import { TestimonialsSection } from './assets/TestimonialsSection';
 import { Footer } from './assets/Footer';
 import TagManager from 'react-gtm-module';
@@ -12,6 +11,7 @@ import { AboutSection } from './assets/AboutSection';
 import { BatteriesSection } from './assets/BatteriesSection';
 import { BatteryReplacementSection } from './Components/CambioBateria';
 import CTAInmediataSection from './assets/CTAInmediato';
+import DomicilioSection from './assets/CambioAdomicilio';
 
 
 
@@ -29,7 +29,7 @@ function LandingPrincipal() {
         <section id="features">
           <Banner />
           <CTAInmediataSection />
-          <DomicilioSections />
+          <DomicilioSection />
         </section>
         <section id="testimonials">
           <TestimonialsSection />
