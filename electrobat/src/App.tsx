@@ -2,19 +2,16 @@ import './index.css';
 import { Routes, Route } from 'react-router-dom';
 import Whatsappbutton  from './Components/Whatsappbutton';
 import DomicilioSections from './assets/Cambioadomicilio';
-
 import { TestimonialsSection } from './assets/TestimonialsSection';
 import { Footer } from './assets/Footer';
 import TagManager from 'react-gtm-module';
 import VolquetesLanding from './pages/volqueteslanding'; 
 import Navbar from './assets/Navbar';
-// import { AboutSection } from './assets/Aboutsection';
 import { Banner } from './assets/Banner';
-
-import { BatteryReplacementSection } from './Components/Cambiobateria';
-import CTAInmediataSection from './assets/CTAInmediato';
 import { AboutSection } from './assets/AboutSection';
 import { BatteriesSection } from './assets/BatteriesSection';
+import { BatteryReplacementSection } from './Components/CambioBateria';
+import CTAInmediataSection from './assets/CTAInmediato';
 
 
 
@@ -41,7 +38,7 @@ function LandingPrincipal() {
           <AboutSection/>
         </section>
         <section id="cambiobateria">
-          <BatteryReplacementSection />
+          <BatteryReplacementSection/>
         </section>
         <section id="batteries">
           <BatteriesSection/>
