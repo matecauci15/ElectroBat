@@ -5,7 +5,7 @@ import { TestimonialsSection } from './assets/TestimonialsSection';
 import { Footer } from './assets/Footer';
 import TagManager from 'react-gtm-module';
 import VolquetesLanding from './pages/volqueteslanding'; 
-import Navbar from './assets/Navbar';
+import Navbar from './assets/NavBar';
 import { Banner } from './assets/Banner';
 import { AboutSection } from './assets/AboutSection';
 import { BatteriesSection } from './assets/BatteriesSection';
